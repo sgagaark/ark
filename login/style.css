@@ -109,6 +109,18 @@ nav li{
 .ham li:hover ul{
   display: block;
 }
+/*allpage*/
+.allpage{
+  background: #66a8c6;
+}
+/*loginpag*/
+.loginpag{
+  width: 320px;
+  height: 360px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 4.8px 0.3px rgba(0, 0, 0, 0.3);
+}
 /*footer*/
 footer{
  height: 30px;
