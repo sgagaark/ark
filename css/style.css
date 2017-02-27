@@ -1,0 +1,269 @@
+/*container*/
+.container{
+  margin: 0;
+  padding: 0;
+  border:none;
+  font-family: 'cwTeXHei', sans-serif;
+  width: 100%;
+  height: auto;
+  /*width: 1024px;
+  margin: 0 auto;*/
+}
+.claer{
+  clear:both;
+}
+/*hover*/
+a:hover{
+  text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+}
+li a div:hover{
+  color: #ffffff;
+  background: #406474;
+}
+/*nav*/
+nav{
+  height: 40px;
+  line-height: 40px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 5px 9.7px 0.3px rgba(0, 0, 0, 0.2);
+  position:relative;
+}
+nav .nav_style a div{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.57;
+  letter-spacing: 1.4px;
+  color: #4c778b;
+  text-align: center;
+  line-height: 40px;
+}
+nav ul{
+  margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+  float: left;
+}
+.nav_right{
+  float:right;
+}
+.nav_li_A{
+  margin-left: 50px;
+}
+.nav_li_B{
+  margin-left: 12px;
+}
+.nav_li_C{
+  width: 85px;
+}
+.nav_li_D{
+  width: 85px;
+  margin-right: 79px;
+}
+/*hambuger*/
+.hamburger-menu {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  display: inline-block;
+}
+.hamburger-menu .icon-bar {
+  background-color: black;
+  display: block;
+  height: 4px;
+  margin: 0 auto 4px;
+  width: 30px;
+}
+/*hambuger-menu*/
+.hello{
+  letter-spacing: 1.3px;
+  color: #e4007f;
+}
+.ham_ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 254px; /*整個漢堡選單的寬高*/
+  height: 1000px;
+  padding-top: 90px;  /*調整漢堡裡的最上層高度*/
+  background: #f7f7f7;
+  display: block;
+}
+.ham_ul li{ /*漢堡緩單裡的li*/
+  text-align: left;
+  height: 48px;
+  float: none;
+}
+.ham_ul li div{
+  padding-left: 50px
+}
+.ham ul{
+  display: none;
+}
+.ham li:hover ul{
+  display: block;
+}
+
+/*header*/
+header{
+  height: 536px;
+  background: #5e9bb7;
+}
+.header_all{
+  padding-top: 93px;
+  width: 1024px;
+  height: 536px;
+  margin: 0 auto;
+  background: url(../images/index/landingpage_1024x536.png);
+  background-repeat:no-repeat;
+}
+.header_txt{
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color:rgba(0, 0, 0, 0.2);
+  margin: auto 12% auto auto;
+  text-align:center;
+  padding-top: 96px;
+}
+.header_txtA{
+  font-size: 72px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.83;
+  letter-spacing: 7.2px;
+  color: #ffffff;
+}
+.header_txtB{
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.25;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  margin-top: 33px;
+}
+/*article*/
+article{
+  height: 690px;
+  padding-top: 65px;
+  background-color: #707070;
+}
+.text_styleA{
+ font-size: 18px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ /*line-height: 2;*/
+ letter-spacing: 3.6px;
+ text-align: left;
+ color: #ffffff;
+ text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.3);
+}
+.text_styleB{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.57;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+}
+.button_A a{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: 1.4px;
+  color: #6cb7d9;
+}
+.button_B a{
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+}
+.button_A{
+  width: 100px;
+  height: 26px;
+  line-height:26px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #6cb7d9;
+  background-color: var(--seafoam-blue);
+  border: solid 1px #6cb7d9;
+  display:inline-block;
+}
+.button_B{
+  width: 100px;
+  height: 26px;
+  line-height:26px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #e4007f;
+  margin-left: 20px;
+  display:inline-block;
+}
+.aboutus_center{
+  text-align: center;
+}
+.aboutus_txtA{
+  margin-top: 20px;
+}
+.aboutus_txtB{
+  margin-top: 50px;
+}
+.aboutus_txtC{
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+.aboutus_txtD{
+  display:table;
+  margin: 0 auto;
+  padding: 0;
+}
+.aboutus_button{
+  height: 50px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+/*footer*/
+footer{
+ height: 30px;
+ background-color: #5e9bb7;
+}
+.footer_txt
+{
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #6cb7d9;
+  line-height:30px;
+}
+/*hover*/
+a:hover{
+  text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+}
+li a div:hover{
+  color: #ffffff;
+  background: #406474;
+}
