@@ -1,0 +1,124 @@
+/*nav*/
+nav{
+  height: 40px;
+  line-height: 40px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 5px 9.7px 0.3px rgba(0, 0, 0, 0.2);
+  position:relative;
+  /*控制320的nan消失*/
+  /*display: none;*/
+}
+nav .nav_style a div{
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.57;
+  letter-spacing: 1.4px;
+  color: #4c778b;
+  text-align: center;
+  line-height: 40px;
+}
+nav ul{
+  margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+  float: left;
+}
+.nav_right{
+  float:right;
+}
+.nav_li_A{
+  margin-left: 50px;
+}
+.nav_li_B{
+  margin-left: 12px;
+}
+.nav_li_C{
+  width: 85px;
+}
+.nav_li_D{
+  width: 85px;
+  margin-right: 79px;
+}
+/*hambuger*/
+/*這裡控制nav和漢堡選單李登陸消失與出線的選項*/
+.login_none{
+  /*display: none;*/
+}
+.logout_none{
+  /*display: none;*/
+}
+/*這裡控制nav和漢堡選單李登陸消失與出線的選項end*/
+.hamburger{
+  height: 40px;
+  background-color: #f7f7f7;
+  margin: 0;
+  line-height: 40px;
+  box-shadow: 0px 5px 9.7px 0.3px rgba(0, 0, 0, 0.2);
+  /*position:relative;
+  z-index: 1;*/
+  /*控制320的nan消失*/
+  /*display: none;*/
+}
+.ham-style{
+  width: 20px;
+  height: 25px;
+  margin-left: 20px;
+}
+.hamnav_style{
+  display:inline-block;
+}
+.ham_logo{
+  margin-left: 40%;
+}
+.hamburger-menu {
+  padding: 0;
+  border: none;
+  display: inline-block;
+
+}
+.hamburger-menu .icon-bar {
+  background-color: black; /*漢堡三條顏色*/
+  display: block;
+  height: 3px;
+  margin: 0px auto 4px 0px;
+  width: 20px;
+}
+/*hambuger-menu*/
+.ham_ul{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 254px; /*整個漢堡選單的寬高*/
+  height: 100%;
+  background: #f7f7f7;
+  display: block;
+}
+.hamburger ul{
+  margin: 0;
+	padding: 0;
+  list-style: none;
+}
+.hello{
+  margin-top: 90px;/*調整漢堡裡的最上層高度*/
+  letter-spacing: 1.3px;
+  color: #e4007f;
+}
+.ham_ul li{ /*漢堡緩單裡的li*/
+  text-align: left;
+  height: 48px;
+}
+.ham_ul li div{
+  padding-left: 50px;
+  height: 48px;
+  line-height: 48px;
+}
+/*漢堡選單控制*/
+.ham_ul{
+  display: none;
+}
+/**/

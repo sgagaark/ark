@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device, initial-scale=1">
     <title>ark</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/ham_style.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
@@ -14,7 +16,35 @@
     </style>
   </head>
   <body>
-    <div class="container">
+      <!-- hamburger -->
+      <div class="hamburger">
+        <div class="ham-style hamnav_style">
+          <ul onclick="ham_show()" class="ham">
+            <li>
+              <button class="hamburger-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <ul class="ham_ul">
+                  <li onclick="ham_close()"><a href="#"><img src=".\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
+                  <li><div class="hello">Hi，您好</div></li>
+                  <li class="login_none"><a href="./login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
+                  <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
+                  <li><a href="#"><div>活動資訊</div></a></li>
+                </ul>
+          </li>
+          </ul>
+        </div><!--ham-style-->
+        <div class="ham_logo hamnav_style">
+          <div class="hamnav_style">
+            <img src=".\images\index\logo_34x26.png" alt="logo">
+          </div>
+          <div class="nav_li_B hamnav_style">ark</div>
+        </div>
+      </div><!--hambuger-->
+  <div class="container">
     <nav>
       <div class="nav_style">
         <ul>
@@ -23,27 +53,15 @@
         </ul>
         <ul class="nav_right">
           <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
-          <li class="nav_li_D"><a href="#"><div>登入</div></a></li>
+          <li class="nav_li_D login_none"><a href="./login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
       </div>
     <div class="clear"></div>
-    <!-- hamburger -->
-    <div class="">
-      <ul class="ham">
-        <li>
-          <button class="hamburger-menu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <ul class="ham_ul">
-              <li><div class="hello">Hi，您好</div></li>
-              <li><a href="#"><div>活動資訊</div></a></li>
-              <li><a href="#"><div>登入</div></a></li>
-            </ul>
-      </li>
-      </ul>
-    </div><!--hambuger-->
+
+    </nav>
     </nav>
     <header>
       <div class="header_all">
@@ -81,8 +99,8 @@
         </div>
       </div><!--aboutus_txt-->
       <div class="aboutus_button">
-          <div class="button_A"><a href="#">註冊會員</a></div>
-          <div class="button_B"><a href="#">登入</a></div>
+          <div class="button_A"><a href="./login/registered.html">註冊會員</a></div>
+          <div class="button_B"><a href="./login/login.html">登入</a></div>
 
       </div>
       <div class=".claer"></div>
@@ -95,5 +113,6 @@
     </div><!--container-->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/javascript.js"></script>
   </body>
 </html>
