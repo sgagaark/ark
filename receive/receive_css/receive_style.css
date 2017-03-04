@@ -1,0 +1,305 @@
+/*container*/
+.container{
+  margin: 0;
+  padding: 0;
+  border:none;
+  font-family: 'cwTeXHei', sans-serif;
+  width: 100%;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+
+/*header*/
+header{
+  height: 420px;
+  background: #5e9bb7;
+}
+.header_all{
+  padding-top: 93px;
+  width: 1024px;
+  height: 536px;
+  margin: 0 auto;
+  background: url(../../images/receive_img/receive_sea_bg.png);
+  background-repeat:no-repeat;
+}
+/*article*/
+article{
+  padding-top: 57px;
+  padding-bottom: 70px;
+  background-color: #707070;
+  /*設定最小高度避免背景留白*/
+  min-height: 430px;
+}
+.article_headertxt{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+  text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3);
+}
+.receive_all{
+  width: 660px;
+  margin: 0 auto 20px auto;
+  box-shadow: 1.4px 1.4px 4.8px 0.3px rgba(0, 0, 0, 0.2);
+}
+.receive_top{
+  padding-top: 38px;
+  height: 121px;
+  border-top-right-radius:5px;
+  border-top-left-radius:5px;
+  background-color: #e5e5e5;
+}
+.receive_img{
+  margin-left: 50px;
+  float: left;
+}
+.receive_box{
+  margin-left: 50px;
+  width: 445px;
+  float: left;
+}
+.receive_title{
+  border-bottom:1px;
+  border-color: #d1d1d1;
+  border-bottom-style: solid;
+  padding-bottom: 8px;
+  font-size: 16px;
+  color: #474646;
+}
+.receive_content{
+  padding-top: 8px;
+  font-size: 14px;
+  color: #6e6e6e;
+}
+.receive_bottom{
+  background: #eeeeee;
+  height: 30px;
+  width: 660px;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+}
+.receive_bottom_time{
+  line-height: 30px;
+  float: left;
+  margin-left: 23px;
+  font-size: 12px;
+  color: #9f9f9f;
+  /*letter-spacing: 1.2px;*/
+}
+.receive_bottom_features{
+  line-height: 30px;
+  float: right;
+  margin-right: 16px;
+}
+#report{
+  margin-right: 8px;
+}
+.more{
+  margin: 50px auto 0px auto;
+  text-align: center;
+  line-height: 26px;
+  width: 100px;
+  height: 26px;
+  border-radius: 2px;
+  border: solid 1px #6cb7d9;
+}
+.more div{
+  color: #6cb7d9;
+}
+/*receive_window 跳出的詳細內容*/
+.receive_window{
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 670px;
+  border-radius: 10px;
+  padding-bottom: 53px;
+}
+.window_close{
+  margin: 23px 0px 0px 630px;
+}
+.receive_window_style{
+  width: 530px;
+  margin-left: 70px;
+  /*background: orange;*/
+  margin-bottom: 60px;
+}
+.receive_window_img{
+  /*background: green;*/
+  width: 50px;
+  height: 50px;
+}
+.receive_window_box{
+  width: 445px;
+  /*background: red;*/
+}
+.receive_window_time{
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+.receive_window_content{
+  width: 445px;
+  /*background: blue;*/
+}
+/*我的回復訊息(獨立控制)*/
+.myreceive_style{
+  /*控制回復訊息區的顯示*/
+  /*display: none;*/
+  border-top:1px;
+  border-color: #d1d1d1;
+  border-top-style: solid;
+  padding-top: 30px;
+  margin-bottom: -23px;
+}
+/*回復訊息區(輸入文字區)*/
+.receive_from_style{
+  /*控制回復訊息區的顯示*/
+  /*display: none;*/
+  /*background: gray;*/
+  margin-bottom: -23px;
+  height: 200px;
+}
+.rec_from_img{
+  line-height: 110px;
+}
+.rec_from_but{
+  text-align: right;
+  margin-top: 30px;
+}
+.rec_from_time{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-right: 13px;
+  background: #e5e5e5;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: right;
+  font-size: 12px;
+  color: #9f9f9f;
+}
+/*刪除與檢與跳出內容共通屬性*/
+.del_rep_win{
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 500px;
+  height: 330px;
+  border-radius: 10px;
+}
+.delete_window_button{
+  width: 188px;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+.features_title{
+  text-align: center;
+  margin-top: 90px;
+  font-size: 18px;
+  letter-spacing: 3.7px;
+  color: #6e6e6e;
+}
+.features_content{
+  text-align: center;
+  margin-top: 32px;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  color: #6e6e6e;
+  margin-bottom: 90px;
+}
+#delete_no,#report_no{
+  margin-right: 20px;
+}
+.button_blue{
+  float: left;
+  width: 84px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 2px;
+  color: #6cb7d9;
+  border: solid 1px #6cb7d9;
+}
+.button_pink{
+ float: left;
+ text-align: center;
+ line-height: 28px;
+ width: 84px;
+ height: 28px;
+ color: #ffffff;
+ background-color: #e4007f;
+}
+/*footer*/
+html, body{
+  height: 100%;
+}
+.container{
+  /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+  min-height: 100%;
+  /* 位置設為relative, 作為footer區塊位置的參考 */
+  position: relative;
+}
+footer{
+ height: 30px;
+ width: 100%;
+ background-color: #5e9bb7;
+ position: absolute;
+ z-index: 0;
+ bottom: 0;
+}
+.footer_txt
+{
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #6cb7d9;
+  line-height:30px;
+}
+/*hover和互動*/
+a:hover{
+  text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+}
+li a div:hover{
+  color: #ffffff;
+  background: #406474;
+}
+.myLink{
+  cursor: pointer;
+  /*background: red;*/
+}
+#blackbg{
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+/*text*/
