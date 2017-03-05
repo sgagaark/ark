@@ -6,7 +6,7 @@
     <title>ark</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
-    <link rel="stylesheet" href="./login_style.css">
+    <link rel="stylesheet" href="../login/login_style.css">
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
@@ -50,35 +50,38 @@
           <li class="nav_li_A"><img src="..\images\index\logo_34x26.png" alt="logo"></li>
           <li><div class="nav_li_B"><a href="#">方舟．ark</a></div></li>
         </ul>
-        <ul class="nav_right">
+        <!-- <ul class="nav_right">
           <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"><a href="#"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-          <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
-          <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
-        </ul>
+          <li class="nav_li_D login_none"><a href="#"><div>登入</div></a></li>
+          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li>
+          <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li>
+          <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li>
+        </ul> -->
       </div>
     <div class="clear"></div>
     </nav>
       <!-- 內容區 -->
     <div class="allpage">
-      <div class="cooke">首頁 > 登入</div>
+      <div class="cooke">首頁 > 登入 > 註冊會員</div>
       <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">使用您的ark帳戶登入</div>
+      <div class="">創造你的ark帳戶</div>
       <div class="loginpag">
         <div class="">
-          <img src=".." alt="head">
-          <form class="" action="index.html" method="post"><!--會員輸入-->
+          <form class="" action="/mail_registered/" method="post"><!--會員輸入-->
+            <div class="">建立帳戶/使用者名稱</div>
             <label>
               <input type="text" name="id" value="">
             </label>
+            <div class="">建立密碼</div>
             <label>
-              <input type="text" name="passworld" value="">
+              <input type="password" name="password" value="">
             </label>
-            <input type="submit" name="" value="登入">
+            <div class="">確認密碼</div>
+            <label>
+              <input type="password" name="passwordcheck" value="">
+            </label>
+            <input type="submit" name="" value="註冊">
           </form>
-          <div class=""><a href="./login_forgot.html">忘記密碼?</a></div>
-          <div class=""><a href="./registered.html">註冊會員</a></div>
         </div>
       </div><!--loginpag-->
     </div><!--allpage-->

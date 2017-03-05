@@ -6,7 +6,7 @@
     <title>ark</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
-    <link rel="stylesheet" href="./login_style.css">
+    <link rel="stylesheet" href="../login/login_style.css">
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
@@ -28,7 +28,7 @@
                 <ul class="ham_ul">
                   <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"><a href="#"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="login_none"><a href="/login"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
                   <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
                   <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
                   <li><a href="#"><div>活動資訊</div></a></li>
@@ -64,19 +64,9 @@
     <div class="allpage">
       <div class="cooke">首頁 > 登入 > 忘記密碼</div>
       <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">忘記密碼</div>
-      <div class="loginpag">
-        <div class="">
-          <div class="">請輸入您註冊之電子郵件，系統將寄<br>送新密碼給您。</div>
-          <form class="" action="index.html" method="post"><!--會員輸入-->
-            <label>
-              <input type="text" name="email" value="">
-            </label>
-            <!-- 要跳轉到"./login_forgot_re.html" -->
-            <input type="submit" name="" value="下一步">
-          </form>
-        </div>
-      </div><!--loginpag-->
+      <div class="">新的密碼已寄送<br>請至註冊之電子信箱收取新密碼</div>
+      <div class="">請重新登入會員</div>
+      <div class="button_A">重寄新密碼</div>
     </div><!--allpage-->
     <footer>
       <div class="footer_txt">

@@ -6,7 +6,7 @@
     <title>ark</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
-    <link rel="stylesheet" href="./login_style.css">
+    <link rel="stylesheet" href="../login/login_style.css">
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
@@ -59,16 +59,23 @@
         </ul> -->
       </div>
     <div class="clear"></div>
-    </nav>
-      <!-- 內容區 -->
+  </nav>
+  <!-- 內容區 -->
     <div class="allpage">
-      <div class="cooke">首頁 > 登入 > 註冊會員</div>
+      <div class="cooke">首頁 > 登入 > 忘記密碼</div>
       <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">電子信箱認證</div>
+      <div class="">忘記密碼</div>
       <div class="loginpag">
-          <div class="">請於5分鐘後至註冊之電子信箱取得認<br>證信件，以完成註冊程序。</div>
-          <div class="button_B"><a href="">重新認證信件</a></div>
-          <!-- 成功的話跳到"./succeed.html" -->
+        <div class="">
+          <div class="">請輸入您註冊之電子郵件，系統將寄<br>送新密碼給您。</div>
+          <form class="" action="/login_forgot_re" method="post"><!--會員輸入-->
+            <label>
+              <input type="text" name="email" value="">
+            </label>
+            <!-- 要跳轉到"./login_forgot_re.html" -->
+            <input type="submit" name="" value="下一步">
+          </form>
+        </div>
       </div><!--loginpag-->
     </div><!--allpage-->
     <footer>
