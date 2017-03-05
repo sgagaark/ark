@@ -1,13 +1,13 @@
-// receive_window淡入淡出
+// send_window淡入淡出
 $(document).ready(function(){
-  $(".receive_top").click(function(){
-    $(".receive_window").fadeIn(500);
+  $(".send_top").click(function(){
+    $(".send_window").fadeIn(500);
     $("#blackbg01").fadeIn(500);
   });
 });
 $(document).ready(function(){
   $(".window_close").click(function(){
-    $(".receive_window").fadeOut(500);
+    $(".send_window").fadeOut(500);
     $("#blackbg01").fadeOut(500);
   });
 });
