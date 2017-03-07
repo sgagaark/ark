@@ -11,6 +11,7 @@
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
     <style>
+      <%= loginCollect.navsatus %> {display:none;}
       a:hover {text-decoration:none};
     </style>
   </head>
@@ -68,9 +69,9 @@
       <div class="loginpag">
         <div class="">
           <img src=".." alt="head">
-          <form class="" action="/index" method="post"><!--會員輸入-->
+          <form class="" action="/log" method="post"><!--會員輸入-->
             <label>
-              <input type="text" name="id" value="">
+              <input type="text" name="email" value="">
             </label>
             <label>
               <input type="text" name="password" value="">
