@@ -388,4 +388,14 @@ li a div:hover{
   z-index: 3;
   background: rgba(0, 0, 0, 0.6);
 }
-/*text*/
+/*ham&nav*/
+#here{
+  background: #406474;
+}
+#here div {color: #ffffff;
+}
+#ham_here{
+  background: #406474;
+}
+#ham_here div {color: #ffffff;
+}
