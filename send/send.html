@@ -7,9 +7,9 @@
     <title>ark</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
-    <link rel="stylesheet" href="./send_css/send_style.css">
+    <link rel="stylesheet" href="../send/send_css/send_style.css">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="./send_js/send_script.js"></script>
+    <script type="text/javascript" src="../send/send_js/send_script.js"></script>
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
@@ -32,9 +32,9 @@
                   <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
                   <li class="login_none"><a href="../login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-                  <li class="logout_none" id="ham_here"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
-                  <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="#"><div>活動資訊</div></a></li>
+                  <li class="logout_none" id="ham_here"><a href=""><div>送船</div></a></li><!--登入才要出現-->
+                  <li class="logout_none"><a href="../receive/receive.html"><div>收船</div></a></li><!--登入才要出現-->
+                  <li><a href="../information/information.html"><div>活動資訊</div></a></li>
                 </ul>
           </li>
           </ul>
@@ -54,10 +54,10 @@
           <li><div class="nav_li_B"><a href="#">方舟．ark</a></div></li>
         </ul>
         <ul class="nav_right">
-          <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
+          <li class="nav_li_C"><a href="../information/information.html"><div>活動資訊</div></a></li>
           <li class="nav_li_D login_none"><a href="../login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-          <li class="nav_li_C logout_none" id="here"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="../receive/receive.html"><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none" id="here"><a href=""><div>送船</div></a></li><!--登入才要出現-->
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
       </div>
@@ -71,11 +71,11 @@
         <div class="form_style">
           <form>
             <div class="send_form_top">
-              <div class="form_title">
-                <input type="text" name=""  placeholder="今天我想說(標題)" value="">
+              <div class="form_title_out">
+                <input class="form_title" type="text" name=""  placeholder="今天我想說(標題)" value="">
               </div>
-              <div class="form_content">
-                <textarea name="name" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
+              <div class="form_content_out">
+                <textarea class="form_content" name="name" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
               </div>
             </div><!--send_form_top-->
             <div class="send_form_bottom">
@@ -108,11 +108,11 @@
           </div>
           <div class="send_box">
             <!-- 標題 -->
-            <div class="send_title">
+            <div class="send_title title_text_style">
               我覺得我一點都不勇敢
             </div>
             <!-- 內容 -->
-            <div class="send_content">
+            <div class="send_content content_text_style">
               如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒.........
             </div>
           </div>
@@ -126,7 +126,10 @@
           <!-- 需要刪除內容-->
           <div class="send_bottom_features">
             <!-- 刪除 -->
-            <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
+            <div class="delete_all">
+              <img class="myLink delete delete_pink" src="../images/shared_img/message_del _icon_hover.png" alt="delete">
+              <img class="myLink delete delete_black" src="../images/shared_img/message_del _icon.png" alt="delete">
+            </div>
           </div>
         </div><!--send_bottom-->
         <!-- 收船的內容需要重複end -->
@@ -142,7 +145,7 @@
               </div>
               <div class="right send_window_box">
                 <!-- 標題 -->
-                <div class="send_window_title">
+                <div class="send_window_title title_text_style">
                   我覺得我一點都不勇敢
                 </div>
                 <!-- 抓時間 -->
@@ -150,7 +153,7 @@
                   >>2017/01/14  05:20
                 </div>
                 <!-- 內容 -->
-                <div class="send_window_content">
+                <div class="send_window_content content_text_style">
                   如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅
                   強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會
                   不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會不小心傷害
@@ -173,7 +176,7 @@
               </div>
               <div class="right send_window_box">
                 <!-- 內容 -->
-                <div class="send_window_content">
+                <div class="send_window_content content_text_style">
                   別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很
                   棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，
                   你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔
@@ -185,10 +188,16 @@
                   </div>
                   <div class="right receive_bottom_features">
                     <!-- 檢舉 -->
-                    <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+                    <div class="report_all">
+                      <img class="myLink report" src="../images/shared_img/message_report_icon_hover.png" alt="Report">
+                      <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+                    </div>
                     <!-- 刪除 -->
-                    <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
-                  </div>
+                    <div class="delete_all">
+                      <img class="myLink delete" src="../images/shared_img/message_del _icon_hover.png" alt="delete">
+                      <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
+                    </div>
+                  </div><!--receive_bottom_features-->
                   <div class="clear"></div>
 
               </div><!--right send_window_box-->
@@ -225,7 +234,7 @@
 
 
 
-        <div class="more">
+        <div class="more button_buder_blue_more">
           <a href="#"><div>＋看更多</div></a>
         </div>
     </article>

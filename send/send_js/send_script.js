@@ -37,3 +37,8 @@ $(document).ready(function(){
     $("#blackbg02").fadeOut(500);
   });
 });
+// 刪除按鈕
+// $(document).ready(function(){
+//   $(".send_bottom_features").hover(function(){
+//     $(".delete_black").fadeIn(500);
+//   });
