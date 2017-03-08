@@ -14,6 +14,7 @@
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
     <style>
+      <%= loginCollect.navsatus %> {display:none;}
       a:hover {text-decoration:none};
     </style>
   </head>
@@ -56,8 +57,8 @@
         <ul class="nav_right">
           <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
           <li class="nav_li_D login_none"><a href="../login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-          <li class="nav_li_C logout_none" id="here"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="/receive"><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none" id="here"><a href="/send"><div>送船</div></a></li><!--登入才要出現-->
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
       </div>
@@ -69,13 +70,13 @@
       <div class="article_form_headertxt">請寫下您想說的話</div>
       <div class="header_all">
         <div class="form_style">
-          <form>
+          <form action="/sendboat" method="post">
             <div class="send_form_top">
               <div class="form_title">
-                <input type="text" name=""  placeholder="今天我想說(標題)" value="">
+                <input type="text" name="title"  placeholder="今天我想說(標題)" value="">
               </div>
               <div class="form_content">
-                <textarea name="name" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
+                <textarea name="content" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
               </div>
             </div><!--send_form_top-->
             <div class="send_form_bottom">
@@ -101,6 +102,7 @@
 
 
       <!-- 收船的內容需要重複 -->
+      <% for(var i=0;i<boatdata.length;i++){ %>
       <div class="send_all">
         <div class="send_top myLink">
           <div class="send_img">
@@ -109,11 +111,11 @@
           <div class="send_box">
             <!-- 標題 -->
             <div class="send_title">
-              我覺得我一點都不勇敢
+            <%= boatdata[i].title %>
             </div>
             <!-- 內容 -->
             <div class="send_content">
-              如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒.........
+            <%= boatdata[i].content %>
             </div>
           </div>
           <div class="clear"></div>
@@ -121,7 +123,7 @@
         <div class="send_bottom">
           <!-- 抓時間 -->
           <div class="send_bottom_time">
-            >>2017/01/14  05:20
+          >><%= moment(boatdata[i].send_time).format('YYYY/MM/DD hh:mm'); %>
           </div>
           <!-- 需要刪除內容-->
           <div class="send_bottom_features">
@@ -143,30 +145,29 @@
               <div class="right send_window_box">
                 <!-- 標題 -->
                 <div class="send_window_title">
-                  我覺得我一點都不勇敢
+                  <%= boatdata[i].title %>
                 </div>
                 <!-- 抓時間 -->
                 <div class="send_window_time">
-                  >>2017/01/14  05:20
+                  >><%= moment(boatdata[i].send_time).format('YYYY/MM/DD hh:mm') %>
                 </div>
                 <!-- 內容 -->
                 <div class="send_window_content">
-                  如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅
-                  強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會
-                  不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會不小心傷害
-                  了你。
+                  <%= boatdata[i].content %>
                 </div>
               </div><!--right send_window_box-->
               <div class="clear"></div>
           </div><!--send_window_style-->
           <!-- 我的內文end -->
+          <% if(!receivedata.length){%>
           <!-- 沒人回應時 -->
           <div class="send_window_style send_receive_style no_receive">
               目前沒人回應
           </div><!--send_receive_style-->
           <!-- 沒人回應時end -->
+          <% } else {%>
           <!-- 對方回應的內文需要重複 -->
-          <div class="send_window_style send_receive_style">
+          <div class="send_window_style send_receive_style has_receive">
               <!-- 數字要做改變 -->
               <div class="left send_rec_window_img">
                 1
@@ -195,6 +196,7 @@
               <div class="clear"></div>
           </div><!--send_receive_style-->
           <!-- 對方回應的內文需要重複 end-->
+          <%}%>
         </div><!--send_window-->
         <!-- 顯示更多內容跳出視窗 zindex=2 end -->
 
@@ -222,7 +224,7 @@
         </div>
       </div><!--send_all-->
       <!-- 收船的內容需要重複end -->
-
+      <% } %>
 
 
         <div class="more">
