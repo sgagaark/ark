@@ -62,19 +62,28 @@
   </nav>
   <!-- 內容區 -->
     <div class="allpage">
-      <div class="cooke">首頁 > 登入 > 忘記密碼</div>
-      <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">忘記密碼</div>
-      <div class="loginpag">
+      <div class="cookie cookie_forgot">首頁 > 登入 > 忘記密碼</div>
+      <div class="logo_up">
+        <img src="..\images\index\logo_50x50.png" alt="logo">
+      </div>
+      <div class="title_text">忘記密碼</div>
+      <div class="loginpag forgot_page">
         <div class="">
-          <div class="">請輸入您註冊之電子郵件，系統將寄<br>送新密碼給您。</div>
-          <form class="" action="index.html" method="post"><!--會員輸入-->
-            <label>
-              <input type="text" name="email" value="">
-            </label>
-            <!-- 要跳轉到"./login_forgot_re.html" -->
-            <input type="submit" name="" value="下一步">
-          </form>
+          <div class="content_text">請輸入您註冊之電子郵件，系統將寄<br>送新密碼給您。</div>
+          <div class="farm_out">
+            <form action="index.html" method="post"><!--會員輸入-->
+              <label>
+                <div class="email_out">
+                  <input class="email" type="text" name="email" value=""placeholder="輸入您的電子郵件">
+                </div>
+              </label>
+              <!-- 要跳轉到"./login_forgot_re.html" -->
+              <div class="but_email_next_out ">
+                <input class="but_email_next login_pink_hover" type="submit" name="" value="下一步">
+              </div>
+            </form>
+          </div>
+
         </div>
       </div><!--loginpag-->
     </div><!--allpage-->

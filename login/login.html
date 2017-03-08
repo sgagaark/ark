@@ -62,24 +62,31 @@
     </nav>
       <!-- 內容區 -->
     <div class="allpage">
-      <div class="cooke">首頁 > 登入</div>
-      <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">使用您的ark帳戶登入</div>
+      <div class="cookie">首頁 > 登入</div>
+      <div class="logo_up">
+        <img src="..\images\index\logo_50x50.png" alt="logo">
+      </div>
+      <div class="title_text">使用您的ark帳戶登入</div>
       <div class="loginpag">
-        <div class="">
-          <img src=".." alt="head">
-          <form class="" action="index.html" method="post"><!--會員輸入-->
+          <div class="user_head">
+            <img src="../images/login/login_img_user.png" alt="head">
+          </div>
+          <form class="form_style" action="index.html" method="post"><!--會員輸入-->
             <label>
-              <input type="text" name="id" value="">
+              <input  class="id" type="text" name="id" value="" placeholder="輸入您的電子郵件">
             </label>
             <label>
-              <input type="text" name="passworld" value="">
+              <input class="password" type="text" name="password" value="" placeholder="密碼">
             </label>
-            <input type="submit" name="" value="登入">
+            <div>
+              <input class="login_but" type="submit" name="" value="登入">
+            </div>
           </form>
-          <div class=""><a href="./login_forgot.html">忘記密碼?</a></div>
-          <div class=""><a href="./registered.html">註冊會員</a></div>
-        </div>
+          <div class="forandreg_all">
+            <div class="left forgot_style"><a href="./login_forgot.html">忘記密碼?</a></div>
+            <div class="left"><a href="./registered.html">註冊會員</a></div>
+            <div class="clear"></div>
+          </div>
       </div><!--loginpag-->
     </div><!--allpage-->
     <footer>

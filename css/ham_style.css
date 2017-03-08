@@ -61,7 +61,7 @@ nav li{
   /*position:relative;
   z-index: 1;*/
   /*控制320的nan消失*/
-  /*display: none;*/
+  display: none;
 }
 .ham-style{
   width: 20px;
