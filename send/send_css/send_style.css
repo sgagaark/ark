@@ -18,25 +18,56 @@
 
 /*header*/
 header{
-  height: 420px;
-  background: #5e9bb7;
+  height: 476px;
+  background: #66a8c6;
+  padding-top: 16px;
 }
 .cookie{
-  position: absolute;
+  margin-bottom: 60px;
   font-size: 12px;
   letter-spacing: 1.2px;
   margin-left: 93px;
-  margin-top: 16px;
   color: #ededed;
 }
+.article_form_headertxt{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+  text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3);
+}
 .header_all{
-  padding-top: 93px;
-  width: 1024px;
+  width: 669px;
   height: 536px;
   margin: 0 auto;
-  background: url(../../images/receive_img/receive_sea_bg.png);
-  background-repeat:no-repeat;
 }
+.form_style{
+  text-align: center;
+}
+.send_form_top{
+  height: 160px;
+  border-top-right-radius:5px;
+  border-top-left-radius:5px;
+  background-color: #ffffff;
+}
+.send_form_bottom{
+  background: #eeeeee;
+  height: 30px;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+}
+.send_form_bottom_time{
+  line-height: 30px;
+  float: right;
+  margin-right: 13px;
+  font-size: 12px;
+  color: #9f9f9f;
+}
+.sed_from_but{
+  margin-top: 50px;
+}
+
 /*article*/
 article{
   padding-top: 57px;
@@ -53,28 +84,28 @@ article{
   color: #ffffff;
   text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3);
 }
-.receive_all{
+.send_all{
   width: 660px;
   margin: 0 auto 20px auto;
   box-shadow: 1.4px 1.4px 4.8px 0.3px rgba(0, 0, 0, 0.2);
 }
-.receive_top{
+.send_top{
   padding-top: 38px;
   height: 121px;
   border-top-right-radius:5px;
   border-top-left-radius:5px;
   background-color: #e5e5e5;
 }
-.receive_img{
+.send_img{
   margin-left: 50px;
   float: left;
 }
-.receive_box{
+.send_box{
   margin-left: 50px;
   width: 445px;
   float: left;
 }
-.receive_title{
+.send_title{
   border-bottom:1px;
   border-color: #d1d1d1;
   border-bottom-style: solid;
@@ -82,19 +113,19 @@ article{
   font-size: 16px;
   color: #474646;
 }
-.receive_content{
+.send_content{
   padding-top: 8px;
   font-size: 14px;
   color: #6e6e6e;
 }
-.receive_bottom{
+.send_bottom{
   background: #eeeeee;
   height: 30px;
   width: 660px;
   border-bottom-right-radius:5px;
   border-bottom-left-radius:5px;
 }
-.receive_bottom_time{
+.send_bottom_time{
   line-height: 30px;
   float: left;
   margin-left: 23px;
@@ -102,7 +133,7 @@ article{
   color: #9f9f9f;
   /*letter-spacing: 1.2px;*/
 }
-.receive_bottom_features{
+.send_bottom_features{
   line-height: 30px;
   float: right;
   margin-right: 16px;
@@ -122,8 +153,8 @@ article{
 .more div{
   color: #6cb7d9;
 }
-/*receive_window 跳出的詳細內容*/
-.receive_window{
+/*send_window 跳出的詳細內容*/
+.send_window{
   display: none;
   position: fixed;
   z-index: 2;
@@ -133,58 +164,62 @@ article{
   background: #ffffff;
   width: 670px;
   border-radius: 10px;
-  padding-bottom: 53px;
+  /*padding-bottom: 53px;*/
 }
 .window_close{
   margin: 23px 0px 0px 630px;
 }
-.receive_window_style{
+.send_window_style{
   width: 530px;
   margin-left: 70px;
   /*background: orange;*/
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
-.receive_window_img{
+.send_window_img{
   /*background: green;*/
   width: 50px;
   height: 50px;
 }
-.receive_window_box{
+.send_rec_window_img{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #ffffff;
+  background: #b5b5b5;
+  border-radius:99em;
+}
+.send_window_box{
   width: 445px;
   /*background: red;*/
 }
-.receive_window_time{
+.send_window_time{
   margin-top: 11px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
-.receive_window_content{
-  width: 445px;
-  /*background: blue;*/
+.receive_bottom_features{
+  margin-top: 11px;
 }
-/*我的回復訊息(獨立控制)*/
-.myreceive_style{
+.a133{
+  background: blue;
+  width: 450px;
+}
+/*沒人回應*/
+.no_receive{
+  /*控制回復訊息區的顯示*/
+  /*display: none;*/
+  text-align: center;
+}
+/*別人回復的訊息(獨立控制)*/
+.send_receive_style{
   /*控制回復訊息區的顯示*/
   /*display: none;*/
   border-top:1px;
   border-color: #d1d1d1;
   border-top-style: solid;
   padding-top: 30px;
-  margin-bottom: -23px;
-}
-/*回復訊息區(輸入文字區)*/
-.receive_from_style{
-  /*控制回復訊息區的顯示*/
-  /*display: none;*/
-  /*background: gray;*/
-  margin-bottom: -23px;
-  height: 200px;
-}
-.rec_from_img{
-  line-height: 110px;
-}
-.rec_from_but{
-  text-align: right;
-  margin-top: 30px;
+  margin-bottom: 33px;
 }
 .rec_from_time{
   position: absolute;
@@ -275,6 +310,7 @@ article{
   text-decoration: none;
 }
 .button_pink_input{
+  margin-right: 20px;
   width: 65px;
   height: 24px;
   -webkit-border-radius: 2;
