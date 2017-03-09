@@ -122,3 +122,14 @@ nav li{
   display: none;
 }
 /**/
+/*ham&nav*/
+#here{
+  background: #406474;
+}
+#here div {color: #ffffff;
+}
+#ham_here{
+  background: #406474;
+}
+#ham_here div {color: #ffffff;
+}
