@@ -43,6 +43,8 @@
   color: #ffffff;
   letter-spacing: 3.6px;
   margin-bottom: 40px;
+  text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.3);
+  line-height: 2;
 }
 /*loginpag*/
 .loginpag{
@@ -214,6 +216,47 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 .but_email_next_out_regist{
   margin-top: 26px;
+}
+/*mail_registered*/
+.cookie_mail_registered{
+  margin-bottom: 126px;
+}
+.mail_registered_page{
+  width: 320px;
+  height: 220px;
+  padding-top: 55px;
+}
+.mail_reg_content_text{
+  width: 241px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 1.4px;
+  color: #6e6e6e;
+}
+.but_email_registered{
+  margin: 50px auto 0 auto;
+  background: #e4007f;
+  color: #ffffff;
+  font-size: 14px;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+/*succeed*/
+.cookie_succ{
+  margin-bottom: 208px;
+}
+.but_succeed{
+  width: 65px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #e4007f;
+  color: #ffffff;
+  margin: 0 auto;
+
 }
 /*footer*/
 html, body{
