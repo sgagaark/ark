@@ -29,10 +29,10 @@
                 <ul class="ham_ul">
                   <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"><a href="#"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="login_none"id="here"><a href="./login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
                   <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
                   <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="#"><div>活動資訊</div></a></li>
+                  <li><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
                 </ul>
           </li>
           </ul>
@@ -49,26 +49,28 @@
       <div class="nav_style">
         <ul>
           <li class="nav_li_A"><img src="..\images\index\logo_34x26.png" alt="logo"></li>
-          <li><div class="nav_li_B"><a href="#">方舟．ark</a></div></li>
+          <li><div class="nav_li_B"><a href="../index.html">方舟．ark</a></div></li>
         </ul>
-        <!-- <ul class="nav_right">
-          <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"><a href="#"><div>登入</div></a></li>
+        <ul class="nav_right">
+          <li class="nav_li_C"><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
+          <li class="nav_li_D login_none"id="here"><a href="./login.html"><div>登入</div></a></li>
           <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li>
           <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li>
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li>
-        </ul> -->
+        </ul>
       </div>
     <div class="clear"></div>
     </nav>
       <!-- 內容區 -->
     <div class="allpage">
-      <div class="cooke">首頁 > 登入 > 註冊會員</div>
-      <img src="..\images\index\logo_50x50.png" alt="logo">
-      <div class="">電子信箱認證</div>
-      <div class="loginpag">
-          <div class="">請於5分鐘後至註冊之電子信箱取得認<br>證信件，以完成註冊程序。</div>
-          <div class="button_B"><a href="">重新認證信件</a></div>
+      <div class="cookie cookie_mail_registered">首頁 > 登入 > 註冊會員</div>
+      <div class="logo_up">
+        <img src="..\images\index\logo_50x50.png" alt="logo">
+      </div>
+      <div class="title_text">電子信箱認證</div>
+      <div class="loginpag mail_registered_page">
+          <div class="mail_reg_content_text">請於5分鐘後至註冊之電子信箱取得<br>認證信件，以完成註冊程序。</div>
+          <div class="but_email_registered login_pink_hover myLink">重新認證信件</div>
           <!-- 成功的話跳到"./succeed.html" -->
       </div><!--loginpag-->
     </div><!--allpage-->

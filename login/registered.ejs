@@ -29,10 +29,10 @@
                 <ul class="ham_ul">
                   <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"><a href="#"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="login_none"id="here"><a href="./login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
                   <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
                   <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="#"><div>活動資訊</div></a></li>
+                  <li><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
                 </ul>
           </li>
           </ul>
@@ -49,20 +49,21 @@
       <div class="nav_style">
         <ul>
           <li class="nav_li_A"><img src="..\images\index\logo_34x26.png" alt="logo"></li>
-          <li><div class="nav_li_B"><a href="#">方舟．ark</a></div></li>
+          <li><div class="nav_li_B"><a href="../index.html">方舟．ark</a></div></li>
         </ul>
-        <!-- <ul class="nav_right">
-          <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"><a href="#"><div>登入</div></a></li>
+        <ul class="nav_right">
+          <li class="nav_li_C"><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
+          <li class="nav_li_D login_none"id="here"><a href="./login.html"><div>登入</div></a></li>
           <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li>
           <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li>
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li>
-        </ul> -->
+        </ul>
       </div>
     <div class="clear"></div>
     </nav>
       <!-- 內容區 -->
     <div class="allpage">
+<<<<<<< HEAD:login/registered.ejs
       <div class="cooke">首頁 > 登入 > 註冊會員</div>
       <img src="..\images\index\logo_50x50.png" alt="logo">
       <div class="">創造你的ark帳戶</div>
@@ -70,18 +71,41 @@
         <div class="">
           <form class="" action="/mail_registered/" method="post"><!--會員輸入-->
             <div class="">建立帳戶/使用者名稱</div>
+=======
+      <div class="cookie cookie_registered">首頁 > 登入 > 註冊會員</div>
+      <div class="logo_up">
+        <img src="..\images\index\logo_50x50.png" alt="logo">
+      </div>
+      <div class="title_text">創造你的ark帳戶</div>
+      <div class="loginpag registered_page">
+        <div class="registered_page_in">
+          <form class="" action="index.html" method="post"><!--會員輸入-->
+            <div class="regist_text">建立帳戶/使用者名稱</div>
+>>>>>>> refs/remotes/origin/master:login/registered.html
             <label>
-              <input type="text" name="id" value="">
+              <input  class="id id_regist" type="text" name="id" value="" placeholder="輸入您的電子郵件">
             </label>
-            <div class="">建立密碼</div>
+            <div class="regist_text">建立密碼</div>
             <label>
+<<<<<<< HEAD:login/registered.ejs
               <input type="password" name="password" value="">
+=======
+              <input class="id id_regist" type="text" name="passworld" value="" placeholder="請輸入6個以上的英文字母">
+>>>>>>> refs/remotes/origin/master:login/registered.html
             </label>
-            <div class="">確認密碼</div>
+            <div class="regist_text">確認密碼</div>
             <label>
+<<<<<<< HEAD:login/registered.ejs
               <input type="password" name="passwordcheck" value="">
             </label>
             <input type="submit" name="" value="註冊">
+=======
+              <input class="id id_regist" type="text" name="passworld" value="" placeholder="再次輸入您設定的密碼">
+            </label>
+            <div class="but_email_next_out but_email_next_out_regist">
+                <input class="but_email_next login_pink_hover" type="submit" name="" value="下一步">
+            </div>
+>>>>>>> refs/remotes/origin/master:login/registered.html
           </form>
         </div>
       </div><!--loginpag-->
