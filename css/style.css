@@ -9,6 +9,12 @@
   /*width: 1024px;
   margin: 0 auto;*/
 }
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
 .claer{
   clear:both;
 }
@@ -166,7 +172,7 @@ a:hover{
 a:link{
   text-decoration: none;
 }
-li a div:hover{
+/*li a div:hover{
   color: #ffffff;
   background: #406474;
-}
+}*/

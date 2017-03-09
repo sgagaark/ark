@@ -30,12 +30,37 @@ header{
   color: #ededed;
 }
 .header_all{
-  padding-top: 93px;
+  /*padding-top: 93px;*/
+  position: relative;
+  z-index: 0;
   width: 1024px;
   height: 536px;
   margin: 0 auto;
-  background: url(../../images/receive_img/receive_sea_bg.png);
+  background-image: url(../../images/receive_img/receive_sea_bg.png);
   background-repeat:no-repeat;
+}
+/*白船的控制*/
+.header_boat_w{
+  position: absolute;
+  left: 555px;
+  top: 192px;
+}
+/*黃船的控制*/
+.header_boat_y{
+  position: absolute;
+  left: 555px;
+  top: 192px;
+}
+.header_wave{
+  position: absolute;
+}
+.header_boat_link{
+  /*display: none;*/
+  width: 157px;
+  height: 130px;
+  position: absolute;
+  left: 555px;
+  top: 192px;
 }
 /*article*/
 article{
@@ -100,7 +125,6 @@ article{
   margin-left: 23px;
   font-size: 12px;
   color: #9f9f9f;
-  /*letter-spacing: 1.2px;*/
 }
 .receive_bottom_features{
   line-height: 30px;
@@ -151,7 +175,6 @@ article{
 }
 .receive_window_box{
   width: 445px;
-  /*background: red;*/
 }
 .receive_window_time{
   margin-top: 11px;
@@ -328,9 +351,8 @@ li a div:hover{
   color: #ffffff;
   background: #406474;
 }
-.myLink{
+.mylink{
   cursor: pointer;
-  /*background: red;*/
 }
 #blackbg01{
   display: none;
@@ -362,4 +384,11 @@ li a div:hover{
   background: #406474;
 }
 #ham_here div {color: #ffffff;
+}
+/*新船與舊船*/
+.new_boat{
+  display: none;
+}
+.old_boat{
+  display: block;
 }

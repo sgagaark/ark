@@ -5,6 +5,7 @@ nav{
   background-color: #f7f7f7;
   box-shadow: 0px 5px 9.7px 0.3px rgba(0, 0, 0, 0.2);
   position:relative;
+  z-index: 1;
   /*控制320的nan消失*/
   /*display: none;*/
 }
@@ -71,6 +72,10 @@ nav li{
 .hamnav_style{
   display:inline-block;
 }
+.ham_close{
+  margin-left: 221px;
+  margin-top: 25px;
+}
 .ham_logo{
   margin-left: 40%;
 }
@@ -78,7 +83,6 @@ nav li{
   padding: 0;
   border: none;
   display: inline-block;
-
 }
 .hamburger-menu .icon-bar {
   background-color: black; /*漢堡三條顏色*/
@@ -89,14 +93,13 @@ nav li{
 }
 /*hambuger-menu*/
 .ham_ul{
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 254px; /*整個漢堡選單的寬高*/
   height: 100%;
   background: #f7f7f7;
-  display: block;
 }
 .hamburger ul{
   margin: 0;
@@ -104,18 +107,26 @@ nav li{
   list-style: none;
 }
 .hello{
-  margin-top: 90px;/*調整漢堡裡的最上層高度*/
-  letter-spacing: 1.3px;
+  margin-top: 70px;/*調整漢堡裡的最上層高度*/
   color: #e4007f;
+}
+.li_hello{
+  margin-bottom: 10px;
+  padding-left: 36px;
 }
 .ham_ul li{ /*漢堡緩單裡的li*/
   text-align: left;
   height: 48px;
 }
-.ham_ul li div{
-  padding-left: 50px;
+.ham_icom{
+  margin-right: 11px;
+}
+.ham_ul li{
   height: 48px;
   line-height: 48px;
+}
+.ham_li_padding{
+  padding-left: 51px;
 }
 /*漢堡選單控制*/
 .ham_ul{
@@ -131,5 +142,15 @@ nav li{
 #ham_here{
   background: #406474;
 }
-#ham_here div {color: #ffffff;
+#ham_here div {
+  color: #ffffff;
+}
+.ham_ul li:hover{
+  background: #406474;
+}
+.ham_ul li:hover div{
+  color: #ffffff;
+}
+.icom_mous_out{
+  display: none;
 }

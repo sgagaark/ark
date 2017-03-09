@@ -37,3 +37,27 @@ $(document).ready(function(){
     $("#blackbg02").fadeOut(500);
   });
 });
+// 黃船點完變白船
+$(document).ready(function(){
+  $(".header_boat_link").click(function(){
+    $(".header_boat_y").fadeOut(500);
+  });
+});
+// 黃船的特效
+// $(document).ready(function(){
+//   $(".header_boat_link").mouseenter(function(){
+//     $(".header_boat_y img").css('width','50px');
+//   });
+// });
+//   $(document).ready(function(){
+//     $(".header_boat_link").mouseleave(function(){
+//       $(".header_boat_y img").css('width','auto');
+//     });
+// });
+// 收新傳按鈕
+$(document).ready(function(){
+  $(".header_boat_link").click(function(){
+    $(".new_boat").slideDown(500);
+    $(".old_boat").fadeOut(0);
+  });
+});
