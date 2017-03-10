@@ -12,6 +12,7 @@
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
     <style>
+      <%= loginCollect.navsatus %> {display:none;}
       a:hover {text-decoration:none};
     </style>
   </head>
@@ -29,10 +30,10 @@
                 <ul class="ham_ul">
                   <li onclick="ham_close()"><a href="#"><img src=".\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"><a href="./login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-                  <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
-                  <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="#"><div>活動資訊</div></a></li>
+                  <li class="login_none"><a href="./login"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
+                  <li class="logout_none"><a href="../recieve/"><div>收船</div></a></li><!--登入才要出現-->
+                  <li><a href="../imformation/"><div>活動資訊</div></a></li>
                 </ul>
           </li>
           </ul>
@@ -49,13 +50,13 @@
       <div class="nav_style">
         <ul>
           <li class="nav_li_A"><img src=".\images\index\logo_34x26.png" alt="logo"></li>
-          <li><div class="nav_li_B"><a href="#">方舟．ark</a></div></li>
+          <li><div class="nav_li_B"><a href="../">方舟．ark</a></div></li>
         </ul>
         <ul class="nav_right">
-          <li class="nav_li_C"><a href="#"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"><a href="./login/login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-          <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C"><a href="../imformation/"><div>活動資訊</div></a></li>
+          <li class="nav_li_D login_none"><a href="../login/"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+          <li class="nav_li_C logout_none"><a href="../receive/"><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
       </div>
@@ -99,8 +100,8 @@
         </div>
       </div><!--aboutus_txt-->
       <div class="aboutus_button">
-          <div class="button_A"><a href="./login/registered.html">註冊會員</a></div>
-          <div class="button_B"><a href="./login/login.html">登入</a></div>
+          <div class="button_A"><a href="../registered/">註冊會員</a></div>
+          <div class="button_B"><a href="../login/">登入</a></div>
 
       </div>
       <div class=".claer"></div>

@@ -6,11 +6,12 @@
     <title>ark</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
-    <link rel="stylesheet" href="./login_style.css">
+    <link rel="stylesheet" href="../login/login_style.css">
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
     <style>
+      <%= loginCollect.navsatus %> {display:none;}
       a:hover {text-decoration:none};
     </style>
   </head>
@@ -28,10 +29,10 @@
                 <ul class="ham_ul">
                   <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
                   <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"id="here"><a href="./login.html"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-                  <li class="logout_none"><a href="#"><div>送船</div></a></li><!--登入才要出現-->
-                  <li class="logout_none"><a href="#"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
+                  <li class="login_none"id="here"><a href="../login/"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <li class="logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
+                  <li class="logout_none"><a href="../receive/"><div>收船</div></a></li><!--登入才要出現-->
+                  <li><a href="../imformation/"><div>活動資訊</div></a></li>
                 </ul>
           </li>
           </ul>
@@ -48,13 +49,13 @@
       <div class="nav_style">
         <ul>
           <li class="nav_li_A"><img src="..\images\index\logo_34x26.png" alt="logo"></li>
-          <li><div class="nav_li_B"><a href="../index.html">方舟．ark</a></div></li>
+          <li><div class="nav_li_B"><a href="../">方舟．ark</a></div></li>
         </ul>
         <ul class="nav_right">
-          <li class="nav_li_C"><a href="../imformation/imformation.html"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"id="here"><a href="./login.html"><div>登入</div></a></li>
-          <li class="nav_li_C logout_none"><a href="#"><div>收船</div></a></li>
-          <li class="nav_li_C logout_none"><a href="#"><div>送船</div></a></li>
+          <li class="nav_li_C"><a href="../imformation/"><div>活動資訊</div></a></li>
+          <li class="nav_li_D login_none"id="here"><a href="../login/"><div>登入</div></a></li>
+          <li class="nav_li_C logout_none"><a href="../receive/"><div>收船</div></a></li>
+          <li class="nav_li_C logout_none"><a href="../send/"><div>送船</div></a></li>
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li>
         </ul>
       </div>
@@ -71,7 +72,7 @@
         <div class="">
           <div class="content_text">請輸入您註冊之電子郵件，系統將寄<br>送新密碼給您。</div>
           <div class="farm_out">
-            <form action="index.html" method="post"><!--會員輸入-->
+            <form action="../login_forgot_re/" method="post"><!--會員輸入-->
               <label>
                 <div class="email_out">
                   <input class="email" type="text" name="email" value=""placeholder="輸入您的電子郵件">
