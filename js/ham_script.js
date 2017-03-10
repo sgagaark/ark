@@ -2,13 +2,13 @@
 $(document).ready(function(){
   $(".hamburger-menu").click(function(){
     $(".ham_ul").animate({ width: "show" });
-
+    $("#blackbg00").fadeIn(300);
   });
 });
 $(document).ready(function(){
   $(".ham_close").click(function(){
     $(".ham_ul").animate({ width: "hide" });
-    // $(".ham_ul").hide(0);
+    $("#blackbg00").fadeOut(300);
   });
 });
 // ham hover 換icom
