@@ -1,10 +1,13 @@
 // receive_window淡入淡出
 $(document).ready(function(){
   $(".receive_top").click(function(){
-    $(".receive_window").fadeIn(300);
+    $("#window"+globalnum).fadeIn(300);
     $("#blackbg01").fadeIn(300);
   });
 });
+function setNextShow(num) {
+  globalnum = num;
+}
 $(document).ready(function(){
   $(".window_close").click(function(){
     $(".receive_window").fadeOut(300);
