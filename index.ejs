@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device, initial-scale=1">
     <title>ark</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/index/ark_logo.ico">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/ham_style.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
     </style>
@@ -20,42 +21,70 @@
       <!-- hamburger -->
       <div class="hamburger">
         <div class="ham-style hamnav_style">
-          <ul onclick="ham_show()" class="ham">
+          <ul class="ham">
             <li>
               <button class="hamburger-menu">
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class=" icon-bar_short"></span>
                 <span class="icon-bar"></span>
               </button>
                 <ul class="ham_ul">
-                  <li onclick="ham_close()"><a href="#"><img src=".\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
-                  <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"><a href="./login"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-                  <li class="logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
-                  <li class="logout_none"><a href="../recieve/"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="../imformation/"><div>活動資訊</div></a></li>
+
+                  <div class="ham_close"><a href="#"><img src=".\images\index\index320_nav_close_icon.png" alt="logo"></a></div>
+                  <div class="li_hello"><div class="hello">Hi，您好</div></div>
+                  <!-- 活動資訊 -->
+                  <li class="ham_li_padding ham_but_01"><a href="../imformation/"><div class="left">
+                    <img class="ham_icom icom_mous_out01 icom_mous_out" src="./images/index/index320_infor_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in01" src="./images/index/index320_infor_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">活動資訊</div></a></li>
+                  <!-- 登入 -->
+                  <li class="login_none ham_li_padding ham_but_02"><a href="../login/"><div class="left">
+                    <img class="ham_icom icom_mous_out02 icom_mous_out" src="./images/index/index320_login_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in02" src="./images/index/index320_login_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <!-- 送船 -->
+                  <li class="logout_none ham_li_padding ham_but_03"><a href="../send/"><div class="left">
+                    <img class="ham_icom icom_mous_out03 icom_mous_out" src="./images/index/nav_burger_send_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in03" src="./images/index/nav_burger_send_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">送船</div></a></li><!--登入才要出現-->
+                  <!-- 收船 -->
+                  <li class="logout_none ham_li_padding ham_but_04"><a href="../receive/"><div class="left">
+                    <img class="ham_icom icom_mous_out04 icom_mous_out" src="./images/index/nav_burger_receive_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in04" src="./images/index/nav_burger_receive_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">收船</div></a></li><!--登入才要出現-->
+                  <!-- 登出 -->
+                  <li class="logout_none logout_non ham_li_padding ham_but_05"><a href="#"><div class="left">
+                    <img class="ham_icom icom_mous_out05 icom_mous_out" src="./images/index/nav_burger_logout_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in05" src="./images/index/nav_burger_logout_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">登出</div></a></li>
+                  <div class="clear"></div>
                 </ul>
           </li>
           </ul>
         </div><!--ham-style-->
-        <div class="ham_logo hamnav_style">
-          <div class="hamnav_style">
-            <img src=".\images\index\logo_34x26.png" alt="logo">
+        <div class="ham_logo">
+          <a href="../index">
+            <div class="hamnav_style">
+              <img src=".\images\index\logo_34x26.png" alt="logo">
+            </div>
+            <div class="nav_li_B hamnav_style">ark</div>
+          </a>
           </div>
-          <div class="nav_li_B hamnav_style">ark</div>
-        </div>
+        <div class="clear"></div>
+        <div id="blackbg00"></div><!--黑背景-->
       </div><!--hambuger-->
+
   <div class="container">
     <nav>
       <div class="nav_style">
         <ul>
           <li class="nav_li_A"><img src=".\images\index\logo_34x26.png" alt="logo"></li>
-          <li><div class="nav_li_B"><a href="../">方舟．ark</a></div></li>
+          <li><div class="nav_li_B"><a href="../index">方舟．ark</a></div></li>
         </ul>
         <ul class="nav_right">
           <li class="nav_li_C"><a href="../imformation/"><div>活動資訊</div></a></li>
           <li class="nav_li_D login_none"><a href="../login/"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-          <li class="nav_li_C logout_none"><a href="../receive/"><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="../receive"><div>收船</div></a></li><!--登入才要出現-->
           <li class="nav_li_C logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
           <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
@@ -100,20 +129,20 @@
         </div>
       </div><!--aboutus_txt-->
       <div class="aboutus_button">
-          <div class="button_A"><a href="../registered/">註冊會員</a></div>
-          <div class="button_B"><a href="../login/">登入</a></div>
-
+          <a href="../registered/"><div class="button_A">註冊會員</div></a>
+          <a href="../login/"><div class="button_B">登入</div></a>
       </div>
       <div class=".claer"></div>
     </article>
+
+    </div><!--container-->
     <footer>
       <div class="footer_txt">
         Copyright © 2017
       </div>
     </footer>
-    </div><!--container-->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/javascript.js"></script>
+    <script src="./js/ham_script.js"></script>
   </body>
 </html>

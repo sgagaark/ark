@@ -1,11 +1,11 @@
 /*container*/
-.container{
+/*.container{
   margin: 0;
   padding: 0;
   border:none;
   font-family: 'cwTeXHei', sans-serif;
   width: 100%;
-}
+}*/
 .left{
   float: left;
 }
@@ -30,20 +30,45 @@ header{
   color: #ededed;
 }
 .header_all{
-  padding-top: 93px;
+  /*padding-top: 93px;*/
+  position: relative;
+  z-index: 0;
   width: 1024px;
   height: 536px;
   margin: 0 auto;
-  background: url(../../images/receive_img/receive_sea_bg.png);
+  background-image: url(../../images/receive_img/receive_sea_bg.png);
   background-repeat:no-repeat;
+}
+/*白船的控制*/
+.header_boat_w{
+  position: absolute;
+  left: 555px;
+  top: 192px;
+}
+/*黃船的控制*/
+.header_boat_y{
+  position: absolute;
+  left: 555px;
+  top: 192px;
+}
+.header_wave{
+  position: absolute;
+}
+.header_boat_link{
+  /*display: none;*/
+  width: 157px;
+  height: 130px;
+  position: absolute;
+  left: 555px;
+  top: 192px;
 }
 /*article*/
 article{
   padding-top: 57px;
-  padding-bottom: 70px;
-  background-color: #707070;
+  /*padding-bottom: 70px;*/
+  /*background-color: #707070;*/
   /*設定最小高度避免背景留白*/
-  min-height: 430px;
+  /*min-height: 430px;*/
 }
 .article_headertxt{
   margin-bottom: 50px;
@@ -100,17 +125,23 @@ article{
   margin-left: 23px;
   font-size: 12px;
   color: #9f9f9f;
-  /*letter-spacing: 1.2px;*/
 }
 .receive_bottom_features{
+  width: 44px;
+  height: 30px;
   line-height: 30px;
   float: right;
   margin-right: 16px;
 }
+.receive_bottom_features_in{
+  width: 18px;
+  height: 18px;
+  margin-top: 17px;
+}
 .report{
   margin-right: 8px;
 }
-.more{
+.button_buder_blue_more{
   margin: 50px auto 0px auto;
   text-align: center;
   line-height: 26px;
@@ -121,6 +152,12 @@ article{
 }
 .more div{
   color: #6cb7d9;
+}
+.button_buder_blue_more:hover{
+  border-color: #3c9ac4;
+}
+.button_buder_blue_more:hover div{
+  color: #3c9ac4;
 }
 /*receive_window 跳出的詳細內容*/
 .receive_window{
@@ -141,25 +178,46 @@ article{
 .receive_window_style{
   width: 530px;
   margin-left: 70px;
-  /*background: orange;*/
   margin-bottom: 60px;
 }
 .receive_window_img{
-  /*background: green;*/
   width: 50px;
   height: 50px;
 }
 .receive_window_box{
   width: 445px;
-  /*background: red;*/
 }
-.receive_window_time{
-  margin-top: 11px;
-  margin-bottom: 20px;
+/*window裡面的文字*/
+.receive_window_title{
+font-size: 16px;
+letter-spacing: 1.6px;
+color: #474646;
 }
 .receive_window_content{
   width: 445px;
-  /*background: blue;*/
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #6e6e6e;
+}
+/*文字css結束*/
+.receive_window_time{
+  margin-top: 11px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #9f9f9f;
+}
+.form_content{
+  width: 445px;
+  height: 110px;
+  padding-top: 18px;
+  padding-left: 21px;
+  resize : none;
+  border-style: solid;
+  border-color: #d1d1d1;
+  border-radius: 5px;
+  border-width: 1px;
+  outline: none;
 }
 /*我的回復訊息(獨立控制)*/
 .myreceive_style{
@@ -249,6 +307,10 @@ article{
   color: #6cb7d9;
   border: solid 1px #6cb7d9;
 }
+.button_blue:hover{
+  border-color: #3c9ac4;
+  color: #3c9ac4;
+}
 .button_pink{
  float: left;
  text-align: center;
@@ -257,6 +319,9 @@ article{
  height: 28px;
  color: #ffffff;
  background-color: #e4007f;
+}
+.button_pink:hover{
+  background: #d20075;
 }
 .button_blue_input{
   margin-right: 20px;
@@ -271,7 +336,7 @@ article{
   background: #5e9bb7;
 }
 .button_blue_input:hover{
-  background: #3cb0fd;
+  background: #3c9ac4;
   text-decoration: none;
 }
 .button_pink_input{
@@ -286,34 +351,37 @@ article{
   background: #e4007f;
 }
 .button_pink_input:hover{
-  background: #f534f5;
+  background: #d20075;
   text-decoration: none;
 }
 /*footer*/
 html, body{
+  font-family: 'cwTeXHei', sans-serif;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  border:none;
 }
 .container{
-  /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+  /*控制nav相對高度*/
+  margin-top: -40px;
+  width: 100%;
   min-height: 100%;
-  /* 位置設為relative, 作為footer區塊位置的參考 */
-  position: relative;
+  margin: auto 0;
+  padding: 0 0 100px 0;
+  border:none;
+  background-color: #707070;
 }
 footer{
+ margin-top: -30px;
  height: 30px;
  width: 100%;
  background-color: #5e9bb7;
- position: absolute;
- z-index: 0;
- bottom: 0;
 }
 .footer_txt
 {
   text-align: center;
   font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   color: #6cb7d9;
   line-height:30px;
 }
@@ -328,9 +396,8 @@ li a div:hover{
   color: #ffffff;
   background: #406474;
 }
-.myLink{
+.mylink{
   cursor: pointer;
-  /*background: red;*/
 }
 #blackbg01{
   display: none;
@@ -352,6 +419,40 @@ li a div:hover{
   z-index: 3;
   background: rgba(0, 0, 0, 0.6);
 }
+/*delete*/
+.delete_all{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.delete_all img{
+  background: #ffffff;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.delete_all img:nth-of-type(2):hover{
+  opacity:0;
+}
+/*report*/
+.report_all{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.report_all img{
+  background: #ffffff;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.report_all img:nth-of-type(2):hover{
+  opacity:0;
+}
 /*ham&nav*/
 #here{
   background: #406474;
@@ -362,4 +463,11 @@ li a div:hover{
   background: #406474;
 }
 #ham_here div {color: #ffffff;
+}
+/*新船與舊船*/
+.new_boat{
+  display: none;
+}
+.old_boat{
+  display: block;
 }

@@ -1,12 +1,4 @@
 /*container*/
-.container{
-  margin: 0;
-  padding: 0;
-  border:none;
-  font-family: 'cwTeXHei', sans-serif;
-  width: 100%;
-  height: 100%;
-}
 .left{
   float: left;
 }
@@ -21,8 +13,8 @@
 }
 /*allpage*/
 .allpage{
-  background: #66a8c6;
-  min-height: 95%;
+  /*background: #66a8c6;*/
+  /*min-height: 95%;*/
   padding-top: 20px;
 }
 .cookie{
@@ -260,29 +252,32 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 /*footer*/
 html, body{
+  font-family: 'cwTeXHei', sans-serif;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  /*height: 100%;*/
+  border:none;
 }
 .container{
-  /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+  /*控制nav相對高度*/
+  /*margin-top: -40px;*/
+  margin: 0;
+  padding: 0 0 200px 0;
+  width: 100%;
   min-height: 100%;
-  /* 位置設為relative, 作為footer區塊位置的參考 */
-  position: relative;
+  background: #66a8c6;
 }
 footer{
+ margin-top: -30px;
  height: 30px;
  width: 100%;
  background-color: #5e9bb7;
- position: absolute;
- z-index: 0;
- bottom: 0;
 }
 .footer_txt
 {
   text-align: center;
   font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   color: #6cb7d9;
   line-height:30px;
 }

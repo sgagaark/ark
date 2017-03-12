@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device, initial-scale=1">
     <title>ark</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="../images/index/ark_logo.ico">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ham_style.css">
     <link rel="stylesheet" href="./receive_css/receive_style.css">
@@ -22,30 +22,56 @@
       <!-- hamburger -->
       <div class="hamburger">
         <div class="ham-style hamnav_style">
-          <ul onclick="ham_show()" class="ham">
+          <ul class="ham">
             <li>
               <button class="hamburger-menu">
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class=" icon-bar_short"></span>
                 <span class="icon-bar"></span>
               </button>
                 <ul class="ham_ul">
-                  <li onclick="ham_close()"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></li>
-                  <li><div class="hello">Hi，您好</div></li>
-                  <li class="login_none"id="here"><a href="../login/"><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
-                  <li class="logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
-                  <li class="logout_none"><a href="../receive/"><div>收船</div></a></li><!--登入才要出現-->
-                  <li><a href="../imformation/"><div>活動資訊</div></a></li>
+                  <div  class="ham_close"><a href="#"><img src="..\images\index\index320_nav_close_icon.png" alt="logo"></a></div>
+                  <div class="li_hello"><div class="hello">Hi，您好</div></div>
+                  <!-- 活動資訊 -->
+                  <li class="ham_li_padding ham_but_01"><a href="../imformation/"><div class="left">
+                    <img class="ham_icom icom_mous_out01 icom_mous_out" src="../images/index/index320_infor_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in01" src="../images/index/index320_infor_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">活動資訊</div></a></li>
+                  <!-- 登入 -->
+                  <li class="login_none ham_li_padding ham_but_02"><a href="../login/"><div class="left">
+                    <img class="ham_icom icom_mous_out02 icom_mous_out" src="../images/index/index320_login_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in02" src="../images/index/index320_login_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">登入</div></a></li><!--class的login_none和logout_none可以消失-->
+                  <!-- 送船 -->
+                  <li class="logout_none ham_li_padding ham_but_03"><a href="../send/"><div class="left">
+                    <img class="ham_icom icom_mous_out03 icom_mous_out" src="../images/index/nav_burger_send_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in03" src="../images/index/nav_burger_send_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">送船</div></a></li><!--登入才要出現-->
+                  <!-- 收船 -->
+                  <li class="logout_none ham_li_padding ham_but_04" id="here"><a href="../receive/"><div class="left">
+                    <img class="ham_icom" src="../images/index/nav_burger_receive_icon_white.png" alt="icon">
+                    <!-- <img class="ham_icom icom_mous_in04" src="../images/index/nav_burger_receive_icon_blue.png" alt="icon"> -->
+                  </div><div class="ham_li_text">收船</div></a></li><!--登入才要出現-->
+                  <!-- 登出 -->
+                  <li class="logout_none logout_non ham_li_padding ham_but_05"><a href="#"><div class="left">
+                    <img class="ham_icom icom_mous_out05 icom_mous_out" src="../images/index/nav_burger_logout_icon_white.png" alt="icon">
+                    <img class="ham_icom icom_mous_in05" src="../images/index/nav_burger_logout_icon_blue.png" alt="icon">
+                  </div><div class="ham_li_text">登出</div></a></li>
+                  <div class="clear"></div>
                 </ul>
           </li>
           </ul>
         </div><!--ham-style-->
-        <div class="ham_logo hamnav_style">
-          <div class="hamnav_style">
-            <img src="..\images\index\logo_34x26.png" alt="logo">
-          </div>
-          <div class="nav_li_B hamnav_style">ark</div>
+        <div class="ham_logo">
+          <a href="../">
+            <div class="hamnav_style">
+              <img src="..\images\index\logo_34x26.png" alt="logo">
+            </div>
+            <div class="nav_li_B hamnav_style">ark</div>
+          </a>
         </div>
+        <div class="clear"></div>
+        <div id="blackbg00"></div><!--黑背景-->
       </div><!--hambuger-->
   <div class="container">
     <nav>
@@ -56,10 +82,10 @@
         </ul>
         <ul class="nav_right">
           <li class="nav_li_C"><a href="../imformation/"><div>活動資訊</div></a></li>
-          <li class="nav_li_D login_none"id="here"><a href="../login/"><div>登入</div></a></li>
-          <li class="nav_li_C logout_none"><a href="../receive/"><div>收船</div></a></li>
-          <li class="nav_li_C logout_none"><a href="../send/"><div>送船</div></a></li>
-          <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li>
+          <li class="nav_li_D login_none"><a href=""><div>登入</div></a></li><!--class的login_none和logout_none可以消失-->
+          <li class="nav_li_C logout_none" id="here"><a href=""><div>收船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_C logout_none"><a href="../send/"><div>送船</div></a></li><!--登入才要出現-->
+          <li class="nav_li_D logout_none"><a href="#"><div>登出</div></a></li><!--登入才要出現-->
         </ul>
       </div>
     <div class="clear"></div>
@@ -68,8 +94,18 @@
     <header>
       <div class="cookie">首頁>收船</div>
       <div class="header_all">
-        <div class="header_boat">
+        <div class="header_boat_w">
+          <img src="../images/receive_img/receive_boat_white.png" alt="boat_w">
         </div>
+        <!-- 黃船有新船時才出現 & 點完變成白船 -->
+        <div class="header_boat_y">
+          <img src="../images/receive_img/receive_boat_yellow.png" alt="boat_y">
+        </div>
+        <div class="header_wave">
+          <img src="../images/receive_img/receive_sea_before_ke.png" alt="wave">
+        </div>
+        <!-- 接收新船的按鈕 -->
+        <div class="header_boat_link mylink"></div>
       </div><!--header_all-->
     </header>
     <div id="blackbg01"></div><!-- 黑背景zindex=1 -->
@@ -77,12 +113,161 @@
 
     <!-- 收船內容 -->
     <article>
+      <!-- 上面的白字 -->
       <div class="article_headertxt">您收到的紙船</div>
 
 
+      <div class="new_boat">
+        <!-- 新的!!!收船的內容需要重複 -->
+        <div class="receive_all">
+        <div class="receive_top mylink">
+          <div class="receive_img">
+            <img src="../images/shared_img/message_logo_pic01.png" alt="boat">
+          </div>
+          <div class="receive_box">
+            <!-- 標題 -->
+            <div class="receive_title">
+              新的我覺得我一點都不勇敢
+            </div>
+            <!-- 內容 -->
+            <div class="receive_content">
+              新的如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒.........
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div><!--receive_top-->
+        <div class="receive_bottom">
+          <!-- 抓時間 -->
+          <div class="receive_bottom_time">
+            >>2017/01/14  05:20
+          </div>
+          <!-- 需要刪除內容及檢舉 -->
+          <div class="receive_bottom_features">
+            <!-- 檢舉 -->
+            <div class="report_all">
+              <img class="myLink report" src="../images/shared_img/message_report_icon_hover.png" alt="Report">
+              <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+            </div>
+            <!-- 刪除 -->
+            <div class="delete_all">
+              <img class="myLink delete" src="../images/shared_img/message_del _icon_hover.png" alt="delete">
+              <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div><!--receive_bottom-->
+
+        <!--顯示更多內容跳出視窗 zindex=2 -->
+        <div class="receive_window">
+          <!-- 對話框叉叉 -->
+          <img class="mylink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
+          <!-- 對方的內文 -->
+          <div class="receive_window_style">
+              <div class="left receive_window_img">
+                <img src="../images/shared_img/message_logo_pic01.png" alt="boat">
+              </div>
+              <div class="right receive_window_box">
+                <!-- 標題 -->
+                <div class="receive_window_title">
+                  新的我覺得我一點都不勇敢
+                </div>
+                <!-- 抓時間 -->
+                <div class="receive_window_time">
+                  >>2017/01/14  05:20
+                </div>
+                <!-- 內容 -->
+                <div class="receive_window_content">
+                  新的如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅
+                  強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會
+                  不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會不小心傷害
+                  了你。
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="right receive_bottom_features_in">
+                <!-- 檢舉 -->
+                <div class="report_all">
+                  <img class="myLink report" src="../images/shared_img/message_report_icon_hover.png" alt="Report">
+                  <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+                </div>
+              </div>
+          </div><!--receive_window_style-->
+          <!-- 對方的內文end -->
+          <!-- 我回應的內文 -->
+          <div class="receive_window_style myreceive_style">
+              <div class="left receive_window_img">
+                <img src="../images/shared_img/receive_icon_you.png" alt="boat">
+              </div>
+              <div class="right receive_window_box">
+                <!-- 內容 -->
+                <div class="receive_window_content">
+                  新的別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很
+                  棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，
+                  你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔
+                  心，你很棒！
+                </div>
+                <!-- 抓時間 -->
+                <div class="receive_window_time">
+                  >>2017/01/14  05:20
+                </div>
+              </div><!--right receive_window_box-->
+              <div class="clear"></div>
+          </div><!--myreceive_style-->
+          <!-- 我回應的內文 end-->
+          <!--輸入回應區 -->
+          <div class="receive_window_style receive_from_style">
+              <div class="left receive_window_img rec_from_img">
+                <img src="../images/shared_img/receive_icon_you.png" alt="boat">
+              </div>
+              <div class="right receive_window_box">
+                <!-- 內容 -->
+                <div class="receive_window_content">
+                  <form>
+                    <textarea class="form_content" name="name" placeholder="你想和他說什麼呢？" rows="5" cols="60"></textarea>
+                    <div class="rec_from_but">
+                      <input class="button_blue_input" type="reset" value="清除">
+                      <input class="button_pink_input" type="submit" name="" value="傳送">
+                    </div>
+                  </form>
+                </div>
+              </div><!--right receive_window_box-->
+              <!-- 抓時間 -->
+              <div class="rec_from_time">
+                >>2017/01/14  05:20
+              </div>
+          </div><!--receive_from_style-->
+          <!--輸入回應區 end-->
+        </div><!--receive_window-->
+        <!-- 刪除跳出視窗 -->
+        <div class="delete_window del_rep_win">
+          <div class="features_title">刪除</div>
+          <div class="features_content">將刪除這艘船，而且你將無法再找到它</div>
+          <div class="delete_window_button">
+            <div class="mylink button_blue" id="delete_no">取消</div>
+            <!-- 刪除內容按鈕 -->
+            <div class="mylink button_pink" id="delete_yes">刪除</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <!-- 檢舉跳出視窗 -->
+        <div class="report_window del_rep_win">
+          <div class="features_title">檢舉</div>
+          <div class="features_content">此內容讓人不舒服，我要檢舉！</div>
+          <div class="delete_window_button">
+            <div class="mylink button_blue" id="report_no">取消</div>
+            <!-- 檢舉內容按鈕 -->
+            <div class="mylink button_pink" id="report_yes">檢舉</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div><!--receive_all-->
+        <!-- 新的收船的內容需要重複end -->
+      </div><!--new_boat-->
+
+
       <!-- 收船的內容需要重複 -->
-      <div class="receive_all">
-        <div class="receive_top myLink">
+      <div class="receive_all old_boat">
+        <div class="receive_top mylink">
           <div class="receive_img">
             <img src="../images/shared_img/message_logo_pic01.png" alt="boat">
           </div>
@@ -106,16 +291,23 @@
           <!-- 需要刪除內容及檢舉 -->
           <div class="receive_bottom_features">
             <!-- 檢舉 -->
-            <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+            <div class="report_all">
+              <img class="myLink report" src="../images/shared_img/message_report_icon_hover.png" alt="Report">
+              <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+            </div>
             <!-- 刪除 -->
-            <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
+            <div class="delete_all">
+              <img class="myLink delete" src="../images/shared_img/message_del _icon_hover.png" alt="delete">
+              <img class="myLink delete" src="../images/shared_img/message_del _icon.png" alt="delete">
+            </div>
           </div>
+          <div class="clear"></div>
         </div><!--receive_bottom-->
 
         <!--顯示更多內容跳出視窗 zindex=2 -->
         <div class="receive_window">
           <!-- 對話框叉叉 -->
-          <img class="myLink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
+          <img class="mylink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
           <!-- 對方的內文 -->
           <div class="receive_window_style">
               <div class="left receive_window_img">
@@ -139,9 +331,12 @@
                 </div>
               </div>
               <div class="clear"></div>
-              <div class="right receive_bottom_features">
+              <div class="right receive_bottom_features_in">
                 <!-- 檢舉 -->
-                <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+                <div class="report_all">
+                  <img class="myLink report" src="../images/shared_img/message_report_icon_hover.png" alt="Report">
+                  <img class="myLink report" src="../images/shared_img/message_report_icon.png" alt="Report">
+                </div>
               </div>
           </div><!--receive_window_style-->
           <!-- 對方的內文end -->
@@ -175,7 +370,7 @@
                 <!-- 內容 -->
                 <div class="receive_window_content">
                   <form>
-                    <textarea name="name" placeholder="你想和他說什麼呢？" rows="5" cols="60"></textarea>
+                    <textarea class="form_content" name="name" placeholder="你想和他說什麼呢？" rows="5" cols="60"></textarea>
                     <div class="rec_from_but">
                       <input class="button_blue_input" type="reset" value="清除">
                       <input class="button_pink_input" type="submit" name="" value="傳送">
@@ -195,9 +390,9 @@
           <div class="features_title">刪除</div>
           <div class="features_content">將刪除這艘船，而且你將無法再找到它</div>
           <div class="delete_window_button">
-            <div class="myLink button_blue" id="delete_no">取消</div>
+            <div class="mylink button_blue" id="delete_no">取消</div>
             <!-- 刪除內容按鈕 -->
-            <div class="myLink button_pink" id="delete_yes">刪除</div>
+            <div class="mylink button_pink" id="delete_yes">刪除</div>
             <div class="clear"></div>
           </div>
         </div>
@@ -206,9 +401,9 @@
           <div class="features_title">檢舉</div>
           <div class="features_content">此內容讓人不舒服，我要檢舉！</div>
           <div class="delete_window_button">
-            <div class="myLink button_blue" id="report_no">取消</div>
+            <div class="mylink button_blue" id="report_no">取消</div>
             <!-- 檢舉內容按鈕 -->
-            <div class="myLink button_pink" id="report_yes">檢舉</div>
+            <div class="mylink button_pink" id="report_yes">檢舉</div>
             <div class="clear"></div>
           </div>
         </div>
@@ -217,19 +412,20 @@
 
 
 
-        <div class="more">
+        <div class="more button_buder_blue_more">
           <a href="#"><div>＋看更多</div></a>
         </div>
     </article>
 
+
+    </div><!--container-->
     <footer>
       <div class="footer_txt">
         Copyright © 2017
       </div>
     </footer>
-    </div><!--container-->
     <!-- <script src="../js/jquery.js"></script> -->
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/javascript.js"></script>
+    <script src="../js/ham_script.js"></script>
   </body>
 </html>
