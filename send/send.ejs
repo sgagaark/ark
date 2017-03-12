@@ -71,19 +71,19 @@
       <div class="article_form_headertxt">請寫下您想說的話</div>
       <div class="header_all">
         <div class="form_style">
-          <form>
+          <form action="../sendboat/" method="post">
             <div class="send_form_top">
               <div class="form_title_out">
-                <input class="form_title" type="text" name=""  placeholder="今天我想說(標題)" value="">
+                <input class="form_title" type="text" name="title"  placeholder="今天我想說(標題)" value="">
               </div>
               <div class="form_content_out">
-                <textarea class="form_content" name="name" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
+                <textarea class="form_content" name="content" placeholder="在想些什麼呢？（內文)" rows="5" cols="60"></textarea>
               </div>
             </div><!--send_form_top-->
             <div class="send_form_bottom">
               <!-- 抓時間 -->
               <div class="send_form_bottom_time">
-                >>2017/01/14  05:20
+                >><%= moment(Date.now()).format('YYYY/MM/DD HH:mm') %>
               </div>
             </div><!--send_bottom-->
             <!-- 按鈕 -->
