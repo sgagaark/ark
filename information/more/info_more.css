@@ -1,0 +1,154 @@
+/*container*/
+/*.container{
+  margin: 0;
+  padding: 0;
+  border:none;
+  font-family: 'cwTeXHei', sans-serif;
+  width: 100%;
+}*/
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+
+
+
+/*article*/
+.cookie{
+  margin-bottom: 62px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  margin-left: 96px;
+  color: #ededed;
+}
+.article_form_headertxt{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+  text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3);
+}
+/*text_style*/
+.title_text_style{
+  font-size: 16px;
+  color: #474646;
+}
+.content_text_style{
+  font-size: 14px;
+  color: #6e6e6e;
+  margin-bottom: 50px;
+}
+article{
+  padding-top: 15px;
+  padding-bottom: 70px;
+  background-color: #66a8c6;
+  /*設定最小高度避免背景留白*/
+  /*min-height: 430px;*/
+}
+.article_headertxt{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+  text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3);
+}
+/*info_all*/
+  .info_more_all{
+    width: 660px;
+    height: 1035px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  .info_more_img{
+    width: 660px;
+    height: 519px;
+    margin-bottom: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .info_more_textall{
+    width: 488px;
+    margin: 0 auto;
+  }
+  .info_text_title{
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    color: #e4007f;
+    margin-bottom: 15px;
+  }
+  .info_more_time{
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #6e6e6e;
+    margin-bottom: 23px;
+  }
+  .info_more_com{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 1.4px;
+    color: #6e6e6e;
+  }
+/*footer*/
+html, body{
+  font-family: 'cwTeXHei', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border:none;
+}
+.container{
+  /*控制nav相對高度*/
+  margin-top: -40px;
+  width: 100%;
+  min-height: 100%;
+  margin: auto 0;
+  padding: 0 0 31px 0;
+  border:none;
+  background-color: #66a8c6;
+}
+footer{
+ margin-top: -30px;
+ height: 30px;
+ width: 100%;
+ background-color: #5e9bb7;
+}
+.footer_txt
+{
+  text-align: center;
+  font-size: 10px;
+  color: #6cb7d9;
+  line-height:30px;
+}
+/*hover和互動*/
+a:hover{
+  text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+}
+li a div:hover{
+  color: #ffffff;
+  background: #406474;
+}
+.myLink{
+  cursor: pointer;
+}
+/*ham&nav*/
+#here{
+  background: #406474;
+}
+#here div {color: #ffffff;
+}
+#ham_here{
+  background: #406474;
+}
+#ham_here div {color: #ffffff;
+}
