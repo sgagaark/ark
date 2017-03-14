@@ -137,11 +137,11 @@
           <div class="send_box">
             <!-- 標題 -->
             <div class="send_title title_text_style">
-              <%= boatdata[i].title %>
+              <%= boatdata[i].send_title %>
             </div>
             <!-- 內容 -->
             <div class="send_content content_text_style">
-              <%= boatdata[i].content %>
+              <%= boatdata[i].send_content %>
             </div>
           </div>
           <div class="clear"></div>
@@ -173,7 +173,7 @@
               </div>
               <div class="right send_window_box">
                 <div class="send_window_title title_text_style">
-                  <%= boatdata[i].title %>
+                  <%= boatdata[i].send_title %>
                 </div>
                 <!-- 抓時間 -->
                 <div class="send_window_time">
@@ -181,36 +181,35 @@
                 </div>
                 <!-- 內容 -->
                 <div class="send_window_content content_text_style">
-                  <%= boatdata[i].content %>
+                  <%= boatdata[i].send_content %>
                 </div>
               </div><!--right send_window_box-->
               <div class="clear"></div>
           </div><!--send_window_style-->
           <!-- 我的內文end -->
-          <% if(!receiveboat.length){ %>
+          <% if(!hasResponse[i]){ %>
           <!-- 沒人回應時 -->
           <div class="send_window_style send_receive_style no_receive">
               目前沒人回應
           </div><!--send_receive_style-->
           <!-- 沒人回應時end -->
           <% }else{ %>
+          <% for(var k=0;k<receiveboat[i].length;k++){ %>
+          <%    if(receiveboat[i][k].is_receive){ %>
           <!-- 對方回應的內文需要重複 -->
           <div class="send_window_style send_receive_style">
               <!-- 數字要做改變 -->
               <div class="left send_rec_window_img">
-                1
+                <%= k+1 %>
               </div>
               <div class="right send_window_box">
                 <!-- 內容 -->
                 <div class="send_window_content content_text_style">
-                  別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很
-                  棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，
-                  你很棒！別擔心，你很棒！別擔心，你很棒！別擔心，你很棒！別擔
-                  心，你很棒！
+                  <%= receiveboat[i][k].receive_content%>
                 </div>
                 <!-- 抓時間與刪除檢舉按鈕 -->
                   <div class="left send_window_time">
-                    >>2017/01/14  05:20
+                    >><%= moment(receiveboat[i][k].receive_time).format('YYYY/MM/DD HH:mm'); %>
                   </div>
                   <div class="right receive_bottom_features">
                     <!-- 檢舉 -->
@@ -230,7 +229,7 @@
               <div class="clear"></div>
           </div><!--send_receive_style-->
           <!-- 對方回應的內文需要重複 end-->
-          <% } %>
+          <% }}} %>
         </div><!--send_window-->
         <!-- 顯示更多內容跳出視窗 zindex=2 end -->
 
