@@ -179,9 +179,17 @@ article{
   border-color: #d1d1d1;
   border-bottom-style: solid;
   padding-bottom: 8px;
+  overflow:hidden;
+	text-overflow : ellipsis;
+  white-space : nowrap;
 }
 .send_content{
   padding-top: 8px;
+  display: -webkit-box;
+  overflow:hidden;
+  text-overflow : ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
 }
 .send_bottom{
   background: #eeeeee;
@@ -192,7 +200,6 @@ article{
   border-bottom-left-radius:5px;
 }
 .send_bottom_time{
-  /*line-height: 30px;*/
   float: left;
   margin-left: 23px;
   font-size: 12px;
@@ -220,7 +227,14 @@ article{
   background: #ffffff;
   width: 670px;
   border-radius: 10px;
-  /*padding-bottom: 53px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.overflow_wh{
+  min-height: inherit;
+  max-height: 700px;
+  overflow-x:hidden;
+  overflow-y:scroll;
 }
 .window_close{
   margin: 23px 0px 0px 630px;
@@ -228,11 +242,10 @@ article{
 .send_window_style{
   width: 530px;
   margin-left: 70px;
-  /*background: orange;*/
   margin-bottom: 30px;
+
 }
 .send_window_img{
-  /*background: green;*/
   width: 50px;
   height: 50px;
 }
@@ -520,4 +533,203 @@ li a div:hover{
   background: #406474;
 }
 #ham_here div {color: #ffffff;
+}
+
+@media screen and (max-width: 768px){
+  .header_all{
+    width: 90%;
+  }
+  .send_top{
+    padding-top: 21px;
+  }
+  .form_title_out{
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+  }
+  .form_title{
+    width: 100%;
+  }
+  .form_content_out{
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+  }
+  .form_content{
+    width: 100%;
+  }
+  /*send外面的*/
+  .send_all{
+    width: 90%;
+  }
+  .send_img{
+    /*display: none;*/
+    margin-left: 20px;
+    line-height: 80px;
+  }
+  .send_box{
+    /*margin-left: 15px;*/
+    width: 75%;
+    /*float: right;*/
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+  .send_title{
+    overflow:hidden;
+  	text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+  .send_content{
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+  }
+  .send_bottom{
+    width: 100%;
+  }
+  .send_bottom_time{
+    margin-left: 15px;
+  }
+  /*send裡面的*/
+  .send_window{
+    width: 90%;
+  }
+  .overflow_wh{
+    max-height: 600px;
+  }
+  .window_close{
+    margin: 23px 5px 0px 90%;
+  }
+  .send_window_style{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .send_window_box{
+    width: 80%;
+    margin-right: 4%;
+  }
+  /*設定別人回復的時間位置*/
+  .send_receive_style .send_window_time{
+    margin-top: 15px;
+  }
+  /*刪除*/
+  .del_rep_win{
+    width: 70%;
+    height: 330px;
+  }
+}
+@media screen and (max-width: 480px){
+  /*header*/
+  .cookie{
+    margin-left: 19px;
+  }
+  .header_all{
+    width: 90%;
+  }
+  .send_top{
+    padding-top: 21px;
+  }
+  .form_title_out{
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+  }
+  .form_title{
+    width: 100%;
+  }
+  .form_content_out{
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+  }
+  .form_content{
+    width: 100%;
+  }
+  /*send外面的*/
+  .send_all{
+    width: 90%;
+  }
+  .send_img{
+    display: none;
+  }
+  .send_box{
+    float: none;
+    margin-left: 15px;
+    width: 90%;
+  }
+  .send_title{
+    overflow:hidden;
+  	text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+  .send_content{
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+  }
+  .send_bottom{
+    width: 100%;
+  }
+  .send_bottom_time{
+    margin-left: 15px;
+  }
+  /*send裡面的*/
+  .send_window{
+    width: 90%;
+  }
+  .overflow_wh{
+    min-height: inherit;
+    max-height: 400px;
+  }
+  .window_close{
+    /*float: right;*/
+    margin: 23px 5px 0px 85%;
+  }
+  .send_window_style{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /*設定數字的位置參考*/
+    position: relative;
+  }
+  .send_window_img{
+    display: none;
+  }
+  .send_window_box{
+    width: 90%;
+    float: left;
+    float: none;
+    margin: 0 auto;
+  }
+  .send_rec_window_img{
+    float: none;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    /*設定數字的位置*/
+    position: absolute;
+    bottom: 1px;
+    left: 5%;
+  }
+  .send_window_style .send_window_content{
+    margin-top: 20px;
+  }
+  /*設定別人回復的時間位置*/
+  .send_receive_style .send_window_time{
+    margin: 0 0 0 30px;
+    padding-bottom: 0;
+  }
+  .receive_bottom_features{
+    margin: 0;
+  }
+  /*刪除*/
+  .del_rep_win{
+    width: 90%;
+    height: 330px;
+  }
 }

@@ -49,7 +49,7 @@ nav li{
 /*hambuger*/
 /*這裡控制nav和漢堡選單李登陸消失與出線的選項*/
 .login_none{
-  /*display: none;*/
+  display: none;
 }
 .logout_none{
   /*display: none;*/
@@ -64,7 +64,7 @@ nav li{
   position:relative;
   z-index: 1;
   /*控制320的nan消失*/
-  /*display: none;*/
+  display: none;
 }
 .ham-style{
   width: 20px;
@@ -188,4 +188,30 @@ nav li{
   position: fixed;
   z-index: 0;
   background: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 768px) {
+  .hamburger{
+    display: none;
+  }
+  nav{
+    display: block;
+  }
+  .nav_li_A{
+    margin-left: 20px;
+  }
+  .nav_li_D{
+    width: 60px;
+    margin-right: 20px;
+  }
+  .nav_li_C{
+    width: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hamburger{
+    display: block;
+  }
+  nav{
+    display: none;
+  }
 }

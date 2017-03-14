@@ -15,7 +15,9 @@
 .clear{
   clear: both;
 }
-
+body{
+  background:#66a8c6;
+}
 
 
 /*article*/
@@ -74,7 +76,6 @@ article{
   }
   .info_text{
     width: 490px;
-    height: 150px;
     padding-left: 42px;
   }
   .info_text_title{
@@ -194,4 +195,46 @@ li a div:hover{
   background: #406474;
 }
 #ham_here div {color: #ffffff;
+}
+@media screen and (max-width: 768px){
+  .info_all{
+    /*width: 450px;*/
+  }
+  .info_text{
+    /*width: 50%;*/
+    /*background: red;*/
+    /*float: left;*/
+  }
+  body{
+    /*background:#66a8c6;*/
+  }
+}
+@media screen and (max-width: 480px) {
+  .cookie{
+    margin-left: 19px;
+  }
+  .info_all{
+    width: 280px;
+    height: 190px;
+  }
+  .info_img{
+    display: none;
+  }
+  .info_text{
+    border-radius: 5px;
+    width: 280px;
+    float: left;
+    padding-left: 23px;
+  }
+  .info_text_com{
+    margin-right: 26px;
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .info_text_butt{
+      margin-top: 28px;
+    }
 }
