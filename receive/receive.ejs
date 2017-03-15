@@ -95,16 +95,22 @@
       <div class="cookie">首頁>收船</div>
       <div class="header_all">
         <div class="header_boat_w">
-          <img src="../images/receive_img/receive_boat_white.png" alt="boat_w">
+          <video class="video1024" src="../images/receive_img/mp4/1024/landingpage_gif_1024_white.mp4" autoplay poster="posterimage.jpg" loop></video>
+          <video class="video720" src="../images/receive_img/mp4/720/landingpage_gif_720_white.mp4" autoplay poster="posterimage.jpg" loop></video>
         </div>
         <!-- 黃船有新船時才出現 & 點完變成白船 -->
-        
+
         <div class="header_boat_y" <% if(boatstatus){ %> style="display:none;" <% } %> >
-        
-          <img src="../images/receive_img/receive_boat_yellow.png" alt="boat_y">
+          <video class="video1024" src="../images/receive_img/mp4/1024/landingpage_gif_1024_yellow.mp4" autoplay poster="posterimage.jpg" loop></video>
+          <video class="video720" src="../images/receive_img/mp4/720/landingpage_gif_720_yellow.mp4" autoplay poster="posterimage.jpg" loop></video>
         </div>
-        <div class="header_wave">
-          <img src="../images/receive_img/receive_sea_before_ke.png" alt="wave">
+        <div class="img_320_ctrl">
+          <div class="header_boat_w">
+            <img src="../images/receive_img/landingpage_gif_320_white.png" alt="boat_w">
+          </div>
+          <div class="header_boat_y" <% if(boatstatus){ %> style="display:none;" <% } %> >
+            <img src="../images/receive_img/landingpage_gif_320_yellow.png" alt="boat_y">
+          </div>
         </div>
         <!-- 接收新船的按鈕 -->
         <div class="header_boat_link mylink"  <% if(boatstatus){ %> style="display:none;" <% } %> ></div>
@@ -119,7 +125,7 @@
       <div class="article_headertxt">您收到的紙船</div>
 
 
-      <div class="new_boat">      
+      <div class="new_boat">
         <% for(var i = 0;i < newReceive_data.length;i++){ %>
         <!-- 新的!!!收船的內容需要重複 -->
         <div class="receive_all">
@@ -162,6 +168,7 @@
 
         <!--顯示更多內容跳出視窗 zindex=2 -->
         <div class="receive_window" id="window<%= newReceive_data[i].boat_id %>">
+          <div class="overflow_wh">
           <!-- 對話框叉叉 -->
           <img class="mylink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
           <!-- 對方的內文 -->
@@ -237,6 +244,7 @@
               </div>
           </div><!--receive_from_style-->
           <!--輸入回應區 end-->
+            </div><!--overflow_wh-->
         </div><!--receive_window-->
         <!-- 刪除跳出視窗 -->
         <div class="delete_window del_rep_win">
@@ -307,6 +315,7 @@
 
         <!--顯示更多內容跳出視窗 zindex=2 -->
         <div class="receive_window" id="window<%= receive_data[i].boat_id %>">
+          <div class="overflow_wh">
           <!-- 對話框叉叉 -->
           <img class="mylink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
           <!-- 對方的內文 -->
@@ -381,6 +390,7 @@
               </div>
           </div><!--receive_from_style-->
           <!--輸入回應區 end-->
+        </div><!--overflow_wh-->
           <% } %>
         </div><!--receive_window-->
         <!-- 刪除跳出視窗 -->

@@ -18,11 +18,11 @@
 
 /*header*/
 header{
-  height: 420px;
   background: #5e9bb7;
 }
 .cookie{
   position: absolute;
+  z-index: 1;
   font-size: 12px;
   letter-spacing: 1.2px;
   margin-left: 93px;
@@ -30,39 +30,51 @@ header{
   color: #ededed;
 }
 .header_all{
-  /*padding-top: 93px;*/
   position: relative;
-  z-index: 0;
-  width: 1024px;
-  height: 536px;
+  max-width: 100%;
+  width: 100%;
+  height: 420px;
   margin: 0 auto;
-  background-image: url(../../images/receive_img/receive_sea_bg.png);
-  background-repeat:no-repeat;
+}
+video{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.video720{
+  display: none;
+}
+.img_320_ctrl{
+  display: none;
 }
 /*白船的控制*/
 .header_boat_w{
   position: absolute;
-  left: 555px;
-  top: 192px;
+  left: 50%;
+  transform: translate(-50%,0);
 }
 /*黃船的控制*/
 .header_boat_y{
   position: absolute;
-  left: 555px;
-  top: 192px;
-}
-.header_wave{
-  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
 }
 .header_boat_link{
   /*display: none;*/
   width: 157px;
   height: 130px;
   position: absolute;
-  left: 555px;
-  top: 192px;
+  left: 52%;
+  top: 50%;
 }
+
 /*article*/
+.overflow_wh{
+  min-height: inherit;
+  max-height: 700px;
+  overflow-x:hidden;
+  overflow-y:scroll;
+}
 article{
   padding-top: 57px;
   /*padding-bottom: 70px;*/
@@ -106,11 +118,19 @@ article{
   padding-bottom: 8px;
   font-size: 16px;
   color: #474646;
+  overflow:hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
 }
 .receive_content{
   padding-top: 8px;
   font-size: 14px;
   color: #6e6e6e;
+  display: -webkit-box;
+  overflow:hidden;
+  text-overflow : ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
 }
 .receive_bottom{
   background: #eeeeee;
@@ -170,7 +190,9 @@ article{
   background: #ffffff;
   width: 670px;
   border-radius: 10px;
-  padding-bottom: 53px;
+  /*padding-bottom: 53px;*/
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 .window_close{
   margin: 23px 0px 0px 630px;
@@ -470,4 +492,182 @@ li a div:hover{
 }
 .old_boat{
   display: block;
+}
+@media screen and (max-width: 1040px){
+  .video1024{
+    display: none;
+  }
+  .video720{
+    display: block;
+  }
+  .header_boat_link{
+    left: 35%;
+    top: 45%;
+  }
+  .img_320_ctrl{
+    display: none;
+  }
+}
+@media screen and (max-width: 720px){
+  .receive_all{
+    width: 90%;
+  }
+  .receive_top{
+    padding-top: 30px;
+  }
+  .receive_img{
+    margin-left: 20px;
+  }
+  .receive_box{
+    margin-left: 30px;
+    width: 70%;
+ }
+ .receive_bottom{
+   width: 100%;
+ }
+ /*刪除*/
+ .del_rep_win{
+   width: 90%;
+   height: 330px;
+ }
+ /*receive裡面*/
+ .receive_window{
+   width: 90%;
+ }
+ .overflow_wh{
+   min-height: inherit;
+   max-height: 400px;
+ }
+ .window_close{
+   /*float: right;*/
+   margin: 23px 5px 0px 95%;
+ }
+ .receive_window_style{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   /*設定數字的位置參考*/
+   position: relative;
+ }
+ .receive_window_box{
+   width: 80%;
+ }
+ .receive_window_content{
+   width: 100%;
+ }
+ .form_content{
+   margin-top: 0px;
+   margin-left: 0px;
+   width: 100%;
+ }
+ .rec_from_but{
+   margin-top: 10px;
+   margin-right: 0px;
+   /*text-align: center;*/
+ }
+ .rec_from_time{
+   padding-left: 20%;
+   background: none;
+   text-align: left;
+ }
+@media screen and (max-width: 480px){
+  .cookie{
+    margin-left: 19px;
+  }
+  .header_all{
+    height: 330px;
+  }
+  .header_boat_link{
+    top:30%;
+    left: 45%;
+  }
+  .video720{
+    display: none;
+  }
+  .img_320_ctrl{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+  /*article*/
+  .receive_all{
+    width: 90%;
+  }
+  .receive_img{
+    display: none;
+  }
+  .receive_box{
+    float: none;
+    margin-left: 15px;
+    width: 90%;
+  }
+  .receive_title{
+    overflow:hidden;
+  	text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+  .receive_content{
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+  }
+  .receive_bottom{
+    width: 100%;
+  }
+  .receive_bottom_time{
+    margin-left: 15px;
+  }
+  /*receive裡面*/
+  .receive_window{
+    width: 90%;
+  }
+  .overflow_wh{
+    min-height: inherit;
+    max-height: 400px;
+  }
+  .window_close{
+    /*float: right;*/
+    margin: 23px 5px 0px 92%;
+  }
+  .receive_window_style{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /*設定數字的位置參考*/
+    position: relative;
+  }
+  .receive_window_img{
+    display: none;
+  }
+  .receive_window_box{
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+  .receive_window_content{
+    width: 100%;
+  }
+  .form_content{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .rec_from_but{
+    margin-top: 5px;
+    margin-right: 0px;
+    text-align: center;
+  }
+  .rec_from_time{
+    padding-left: 20px;;
+    background: none;
+    text-align: left;
+  }
+  /*刪除*/
+  .del_rep_win{
+    width: 90%;
+    height: 330px;
+  }
 }
