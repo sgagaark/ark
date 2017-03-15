@@ -119,21 +119,22 @@
       <div class="article_headertxt">您收到的紙船</div>
 
 
-      <div class="new_boat">
+      <div class="new_boat">      
+        <% for(var i = 0;i < newReceive_data.length;i++){ %>
         <!-- 新的!!!收船的內容需要重複 -->
         <div class="receive_all">
-        <div class="receive_top mylink">
+        <div class="receive_top mylink" onclick="setNextShow('<%= newReceive_data[i].boat_id %>')">
           <div class="receive_img">
             <img src="../images/shared_img/message_logo_pic01.png" alt="boat">
           </div>
           <div class="receive_box">
             <!-- 標題 -->
             <div class="receive_title">
-              新的我覺得我一點都不勇敢
+              <%= newReceive_data[i].title %>
             </div>
             <!-- 內容 -->
             <div class="receive_content">
-              新的如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒.........
+              <%= newReceive_data[i].content %>
             </div>
           </div>
           <div class="clear"></div>
@@ -141,7 +142,7 @@
         <div class="receive_bottom">
           <!-- 抓時間 -->
           <div class="receive_bottom_time">
-            >>2017/01/14  05:20
+            >><%= moment(newReceive_data[i].send_time).format('YYYY/MM/DD HH:mm') %>
           </div>
           <!-- 需要刪除內容及檢舉 -->
           <div class="receive_bottom_features">
@@ -160,7 +161,7 @@
         </div><!--receive_bottom-->
 
         <!--顯示更多內容跳出視窗 zindex=2 -->
-        <div class="receive_window">
+        <div class="receive_window" id="window<%= newReceive_data[i].boat_id %>">
           <!-- 對話框叉叉 -->
           <img class="mylink window_close" src="../images/index/index320_nav_close_icon.png" alt="close">
           <!-- 對方的內文 -->
@@ -171,18 +172,15 @@
               <div class="right receive_window_box">
                 <!-- 標題 -->
                 <div class="receive_window_title">
-                  新的我覺得我一點都不勇敢
+                  <%= newReceive_data[i].title%>
                 </div>
                 <!-- 抓時間 -->
                 <div class="receive_window_time">
-                  >>2017/01/14  05:20
+                >><%= moment(newReceive_data[i].send_time).format('YYYY/MM/DD HH:mm') %>
                 </div>
                 <!-- 內容 -->
                 <div class="receive_window_content">
-                  新的如果我的堅強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅
-                  強任性，會不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會
-                  不小心傷害了你。你能不能溫柔提醒如果我的堅強任性，會不小心傷害
-                  了你。
+                  <%= newReceive_data[i].content%>
                 </div>
               </div>
               <div class="clear"></div>
@@ -196,7 +194,7 @@
           </div><!--receive_window_style-->
           <!-- 對方的內文end -->
           <!-- 我回應的內文 -->
-          <div class="receive_window_style myreceive_style">
+          <div class="receive_window_style myreceive_style" style="display:none;">
               <div class="left receive_window_img">
                 <img src="../images/shared_img/receive_icon_you.png" alt="boat">
               </div>
@@ -235,7 +233,7 @@
               </div><!--right receive_window_box-->
               <!-- 抓時間 -->
               <div class="rec_from_time">
-                >>2017/01/14  05:20
+                >><%= moment(Date.now()).format('YYYY/MM/DD HH:mm') %>
               </div>
           </div><!--receive_from_style-->
           <!--輸入回應區 end-->
@@ -264,6 +262,7 @@
         </div>
       </div><!--receive_all-->
         <!-- 新的收船的內容需要重複end -->
+      <% } %>
       </div><!--new_boat-->
 
       <% for(var i = 0;i < receive_data.length;i++){ %>

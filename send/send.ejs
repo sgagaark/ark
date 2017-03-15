@@ -195,13 +195,14 @@
           </div><!--send_receive_style-->
           <!-- 沒人回應時end -->
           <% }else{ %>
+          <% var countreceive = 1 %>
           <% for(var k=0;k<receiveboat[i].length;k++){ %>
           <%    if(receiveboat[i][k].is_receive){ %>
           <!-- 對方回應的內文需要重複 -->
           <div class="send_window_style send_receive_style">
               <!-- 數字要做改變 -->
               <div class="left send_rec_window_img">
-                <%= k+1 %>
+                <%= countreceive++ %>
               </div>
               <div class="right send_window_box">
                 <!-- 內容 -->
