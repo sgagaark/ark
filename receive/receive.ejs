@@ -229,8 +229,9 @@
               <div class="right receive_window_box">
                 <!-- 內容 -->
                 <div class="receive_window_content">
-                  <form>
-                    <textarea class="form_content" name="name" placeholder="你想和他說什麼呢？" rows="5" cols="60"></textarea>
+                  <form action="../replyboat/" method="post">
+                    <input name="boat_id" style="display:none;" value="<%= newReceive_data[i].boat_id %>">
+                    <textarea class="form_content" name="content" placeholder="你想和他說什麼呢？" rows="5" cols="60"></textarea>
                     <div class="rec_from_but">
                       <input class="button_blue_input" type="reset" value="清除">
                       <input class="button_pink_input" type="submit" name="" value="傳送">
