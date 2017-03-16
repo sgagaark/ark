@@ -62,15 +62,20 @@ article{
 /*info_all*/
   .info_more_all{
     width: 660px;
-    height: 1035px;
+    /*height: 1035px;*/
     background: #ffffff;
     border-radius: 5px;
+    padding-bottom: 40px;
     margin: 0 auto;
   }
   .info_more_img{
     width: 660px;
-    height: 519px;
+    /*height: 519px;*/
     margin-bottom: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .info_more_img img{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
