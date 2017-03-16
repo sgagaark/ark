@@ -231,10 +231,10 @@ article{
   padding-bottom: 10px;
 }
 .overflow_wh{
-  min-height: inherit;
+  min-height: 400px;
   max-height: 700px;
   overflow-x:hidden;
-  overflow-y:scroll;
+  overflow-y:inherit;
 }
 .window_close{
   margin: 23px 0px 0px 630px;
@@ -426,7 +426,7 @@ article{
 }
 /*footer*/
 html, body{
-  font-family: 'cwTeXHei', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -597,6 +597,7 @@ li a div:hover{
     width: 90%;
   }
   .overflow_wh{
+    min-height: 350px;
     max-height: 600px;
   }
   .window_close{
@@ -683,7 +684,7 @@ li a div:hover{
     width: 90%;
   }
   .overflow_wh{
-    min-height: inherit;
+    min-height: 350px;
     max-height: 400px;
   }
   .window_close{
