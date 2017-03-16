@@ -158,6 +158,9 @@ article{
   height: 18px;
   margin-top: 17px;
 }
+.receive_bottom_features_in .report_all img{
+   background: #ffffff;
+}
 .report{
   margin-right: 8px;
 }
@@ -449,7 +452,7 @@ li a div:hover{
   transform: translate(-50%, -50%);
 }
 .delete_all img{
-  background: #ffffff;
+  background: #eeeeee;
   position: absolute;
   right: 0%;
   top: 50%;
@@ -466,7 +469,7 @@ li a div:hover{
   transform: translate(-50%, -50%);
 }
 .report_all img{
-  background: #ffffff;
+  background: #eeeeee;
   position: absolute;
   left: 0%;
   top: 50%;
