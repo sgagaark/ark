@@ -231,7 +231,7 @@ article{
   padding-bottom: 10px;
 }
 .overflow_wh{
-  min-height: 400px;
+  min-height: inherit;
   max-height: 700px;
   overflow-x:hidden;
   overflow-y:inherit;
@@ -497,11 +497,14 @@ li a div:hover{
   transform: translate(-50%, -50%);
 }
 .delete_all img{
-  background: #ffffff;
+  background: #eeeeee;
   position: absolute;
   right: 0%;
   top: 50%;
   transform: translate(0%, -50%);
+}
+.receive_bottom_features .delete_all img{
+  background: #ffffff;
 }
 .delete_all img:nth-of-type(2):hover{
   opacity:0;
@@ -597,7 +600,7 @@ li a div:hover{
     width: 90%;
   }
   .overflow_wh{
-    min-height: 350px;
+    min-height: inherit;
     max-height: 600px;
   }
   .window_close{
@@ -684,7 +687,7 @@ li a div:hover{
     width: 90%;
   }
   .overflow_wh{
-    min-height: 350px;
+    min-height: inherit;
     max-height: 400px;
   }
   .window_close{
