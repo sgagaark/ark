@@ -200,3 +200,54 @@ li a div:hover{
 }
 #ham_here div {color: #ffffff;
 }
+@media screen and (max-width: 768px){
+  .info_all{
+    width: 80%;
+    height: 120px;
+    margin: 0 auto 30px auto;
+  }
+  .info_img img{
+    width: 80%;
+  }
+  .info_text{
+    width: 60%;
+    height: 150px;
+    padding-left: 0px;
+    margin-right: 0;
+    float: left;
+  }
+    .info_text_title{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow:hidden;
+    	text-overflow : ellipsis;
+      white-space : nowrap;
+    }
+  .info_text_com{
+    margin-right: 0px;
+    width: 100%;
+    display: -webkit-box;
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+  }
+}
+@media screen and (max-width: 550px){
+  .info_text{
+    width: 54%;
+  }
+}
+@media screen and (max-width: 480px){
+  .info_img{
+    display: none;
+  }
+  .info_text{
+    width: 90%;
+    height: 150px;
+    padding-left: 0px;
+    float: none;
+    margin: 0 auto;
+    padding-top: 1px;
+  }
+}
