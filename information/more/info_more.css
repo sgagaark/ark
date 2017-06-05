@@ -61,7 +61,8 @@ article{
 }
 /*info_all*/
   .info_more_all{
-    width: 660px;
+    width: 80%;
+    max-width: 660px;
     /*height: 1035px;*/
     background: #ffffff;
     border-radius: 5px;
@@ -69,18 +70,17 @@ article{
     margin: 0 auto;
   }
   .info_more_img{
-    width: 660px;
-    /*height: 519px;*/
     margin-bottom: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .info_more_img img{
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .info_more_textall{
-    width: 488px;
+    width: 90%;
     margin: 0 auto;
   }
   .info_text_title{
@@ -88,6 +88,11 @@ article{
     letter-spacing: 3.6px;
     color: #e4007f;
     margin-bottom: 15px;
+    /*overflow:hidden;*/
+    display: -webkit-box;
+    /*overflow:hidden;*/
+    text-overflow : ellipsis;
+    -webkit-box-orient: vertical
   }
   .info_more_time{
     font-size: 12px;
@@ -100,6 +105,10 @@ article{
     line-height: 1.71;
     letter-spacing: 1.4px;
     color: #6e6e6e;
+    display: -webkit-box;
+    /*overflow:hidden;*/
+    text-overflow : ellipsis;
+    -webkit-box-orient: vertical
   }
 /*footer*/
 html, body{
@@ -156,4 +165,14 @@ li a div:hover{
   background: #406474;
 }
 #ham_here div {color: #ffffff;
+}
+@media screen and (max-width: 768px){
+  .cookie{
+    margin-left: 20px;
+    color: #ededed;
+  }
+
+}
+@media screen and (max-width: 320px){
+
 }
