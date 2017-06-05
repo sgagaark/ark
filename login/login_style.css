@@ -295,3 +295,9 @@ li a div:hover{
 .login_pink_hover:hover{
   background: #d20075;
 }
+@media screen and (max-width: 768px){
+  .cookie{
+    margin-left: 20px;
+    color: #ededed;
+  }
+}
