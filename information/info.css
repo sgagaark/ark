@@ -232,6 +232,10 @@ li a div:hover{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical
   }
+  .cookie{
+    margin-left: 20px;
+    color: #ededed;
+  }
 }
 @media screen and (max-width: 550px){
   .info_text{
