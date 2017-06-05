@@ -95,20 +95,17 @@
       <div class="cookie">首頁 > 活動資訊</div>
       <div class="info_more_all">
         <div class="info_more_img">
-          <img src="../../images/information_img/more/infor_click_pic02_1024.png" alt="">
+          <img src="../../images/information_img/more/<%= newsdata[0].img %>" alt="">
         </div>
         <div class="info_more_textall">
-          <div class="info_text_title">跑跳好心情</div>
+          <div class="info_text_title">
+            <%= newsdata[0].title %>
+            </div>
           <div class="info_more_time">
-            2017/03/08
+            <%= moment(newsdata[0].datetime).format('YYYY/MM/DD') %>
           </div>
           <div class="info_more_com">
-            壹、	課程簡介：以ART藝術治療來瞭解自己，看到別人。本課程將以Jung理論為出發，討論個人解析、團體解析以及社會情境中人們之表達性行為，並深入討論動機與人格相關議題。初、進階課程完成後，預計於2013年10月，日本樋口教授(日本生命線理事長)將來台灣教授高階證照班。
-            <br>貳、辦理單位：社團法人國際生命線台灣總會
-            <br>(電話：02-27189595、傳真：02-25473589、mail：lifelroc@ms25.hinet.net）
-            <br>參、參加對象/人數：資格不限，滿15人開班，歡迎有心成為優秀協談師者，報名參加。
-            <br>肆、費用：報名費每階3,000元（東區上課含吃、住、耗材及講義、其餘地區不含住宿）
-            <br>生命線人員：優惠初階8折、進階5折、非生命線人員：初階原價、進階5折
+            <%= newsdata[0].content %>
           </div>
         </div>
 
