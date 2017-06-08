@@ -40,7 +40,7 @@ let registerMail = {
     from: 'ark@gmail.com',
     to: '',
     subject: 'ark註冊認證信',
-    html:'',
+    html: '',
 }
 
 //登入後css修改
@@ -84,10 +84,10 @@ app.get('/:page', function (req, res) {
             res.render(__dirname + '/login/registered', { loginCollect, error });
             break;
         case 'login':        //登入
-            var ok = 0,error = 0;
+            var ok = 0, error = 0;
             ok = req.param('ok');
             error = req.param('error');
-            res.render(__dirname + '/login/login', { loginCollect,ok,error });
+            res.render(__dirname + '/login/login', { loginCollect, ok, error });
             break;
         case 'login_forgot': //忘記密碼
             res.render(__dirname + '/login/login_forgot', { loginCollect });
@@ -126,8 +126,8 @@ app.get('/:page', function (req, res) {
             break;
         case 'emailverify':      //公告內容
             let email = req.param('email');
-            verifyAccount(email,()=>{
-                res.redirect('/login?ok=1'); 
+            verifyAccount(email, () => {
+                res.redirect('/login?ok=1');
                 return;
             });
             break;
@@ -222,29 +222,28 @@ app.post('/:page', function (req, res) {
                 return;
             }
             registerMail.to = reqestData.email;
-            registerMail.html = 
-            `<h2>ARK註冊認證信</h2><p>請點擊以下連結認證您的email</p><a href="http://www.rongserver.com/emailverify?email=${reqestData.email}">連結</a>`;
+            registerMail.html =
+                `<h2>ARK註冊認證信</h2><p>請點擊以下連結認證您的email</p><a href="http://www.rongserver.com/emailverify?email=${reqestData.email}">連結</a>`;
 
-            transporter.sendMail(registerMail,function(error,info){
-                        if(error){
+
+            //查詢是否註冊過
+            checkUserAccount(reqestData, () => {
+                console.log(`Email:${reqestData.email}已經註冊過`);
+                res.redirect('/registered?error=2'); //已經註冊過
+            }, () => {
+                //新增使用者帳號
+                addUserAccount(reqestData, () => {
+                    console.log(`Email:${reqestData.email}註冊成功`);
+                    transporter.sendMail(registerMail, function (error, info) {
+                        if (error) {
                             console.log(error);
-                        }else{
+                        } else {
                             console.log(`${reqestData.email}的註冊信已發送`);
                         }
                     });
-
-            //查詢是否註冊過
-            // checkUserAccount(reqestData, () => {
-            //     console.log(`Email:${reqestData.email}已經註冊過`);
-            //     res.redirect('/registered?error=2'); //已經註冊過
-            // }, () => {
-            //     //新增使用者帳號
-            //     addUserAccount(reqestData, () => {
-            //         console.log(`Email:${reqestData.email}註冊成功`);
-                    
-            //         res.render(__dirname + '/login/mail_registered', { loginCollect });
-            //     });
-            // });
+                    res.render(__dirname + '/login/mail_registered', { loginCollect });
+                });
+            });
             break;
         case 'login_forgot_re': //忘記密碼跳轉
             res.render(__dirname + '/login/login_forgot_re', { loginCollect });
@@ -261,7 +260,7 @@ app.post('/:page', function (req, res) {
                         res.redirect(ErrorRedirect);
                         return;
                     } else {
-                        if(data[0].enabled==0){
+                        if (data[0].enabled == 0) {
                             res.redirect('/login?error=1');
                         }
 
