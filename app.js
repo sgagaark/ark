@@ -262,6 +262,7 @@ app.post('/:page', function (req, res) {
                     } else {
                         if (data[0].enabled == 0) {
                             res.redirect('/login?error=1');
+                            return;
                         }
 
                         console.log('密碼正確，登入成功');
