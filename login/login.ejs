@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/ham_style.css">
     <link rel="stylesheet" href="../login/login_style.css">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+    <%if(ok==1){%>
+    alert('信箱認證成功，請重新登入');
+    <%}%>
+    
+    </script>
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
     </style>
@@ -110,6 +116,11 @@
             <div>
               <input class="login_but" type="submit" name="" value="登入">
             </div>
+              <label>
+              <% if(error==1){%>
+              信箱尚未認證
+              <% } %>
+              </label>
           </form>
           <div class="forandreg_all">
             <div class="left forgot_style"><a href="../login_forgot/">忘記密碼?</a></div>
