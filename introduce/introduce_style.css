@@ -1,0 +1,63 @@
+article{
+    background-color:#66a8c6 ;
+}
+.aboutus_txtC{
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+.text_styleB{
+    font-size: 16px;
+}
+.team_out{
+    margin-bottom: 100px;
+    padding-bottom: 150px;
+}
+.team_all{
+    width:614px; 
+    margin: 0 auto;
+}
+.aboutus_txtA{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.photo_all{
+    text-align: center;
+    margin-right: 70px;
+}
+.photo_all_final{
+    text-align: center;
+}
+.photo_img{
+    margin-bottom: 20px;
+}
+.photo_text{
+    font-size: 14px;
+    line-height: 2.57;
+    color: #ffffff;
+    text-shadow: 1.4px 1.4px 4.8px rgba(0, 0, 0, 0.3); 
+}
+@media screen and (max-width: 768px){
+    .team_all{
+        width:50%; 
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+    .team_all{
+        width:100px; 
+        margin: 0 auto;
+        padding-left: -70px;
+    }
+    .photo_all{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+    .photo_all_final{
+        margin-bottom: 100px;
+    }
+}

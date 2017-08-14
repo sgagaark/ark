@@ -145,6 +145,12 @@ article{
   margin: 0 auto;
   padding: 0;
 }
+.seemore{
+  padding-left: 20px;
+}
+.seemore_text{
+  padding-right: 10px;
+}
 .aboutus_button{
   height: 50px;
   margin-top: 40px;
