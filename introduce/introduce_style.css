@@ -24,6 +24,10 @@ article{
     text-align: center;
     margin-right: 70px;
 }
+.photo_all_second{
+    text-align: center;
+    margin-right: 70px;
+}
 .photo_all_final{
     text-align: center;
 }
@@ -38,9 +42,14 @@ article{
 }
 @media screen and (max-width: 768px){
     .team_all{
-        width:50%; 
+        width:272px;
         height: 300px;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
+        margin-bottom: 50px;
+    }
+    .photo_all_second{
+        margin-right: 0px;
+         margin-bottom: 30px;
     }
 }
 
