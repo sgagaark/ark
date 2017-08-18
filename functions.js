@@ -1,9 +1,9 @@
 let mysql = require('mysql'),
     moment = require('moment');
 var connection = mysql.createConnection({
-    host: '192.168.3.4',
-    user: 'rong',
-    password: 'ab22978084',
+    host: '127.0.0.1',
+    user: 'root',
+    password: 'rong1234',
     database: 'ARK'
 });
 //新增使用者

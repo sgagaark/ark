@@ -12,7 +12,7 @@ let mysql = require('mysql'),
     validator = require("email-validator"),
     nodemailer = require("nodemailer"),
     smtpTransport = require('nodemailer-smtp-transport'),
-    port = 1337;
+    port = 80;
 require('./functions');
 
 //session設定
@@ -28,6 +28,7 @@ app.use(favicon('images/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//email資料
 let transporter = nodemailer.createTransport(smtpTransport({
     service: 'gmail',
     auth: {
@@ -118,6 +119,7 @@ app.get('/:page', function (req, res) {
                 if (!data.length) {
                     console.log('取得公告失敗');
                     res.redirect(ErrorRedirect);
+                    return;
                 } else {
                     newsdata = data;
                     res.render(__dirname + '/information/more/information_more', { loginCollect, newsdata, moment });
@@ -327,42 +329,65 @@ function resStatus(status) {
 }
 
 //API功能
-app.get('/ark/api/:action', function (req, res) {
+app.post('/ark/api/:action', function (req, res) {
+    var WebAction = req.params.action;
     let content;
-    var reqestData = { //傳入的資料
-        id: null,
-        email: 'test022504@gmail.com',
-        passwd: base64encode('1234'),
-        last_login_date: moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'),
-        last_boat_date: null
-    };
+    var reqestData = req.body;
+
     var responseData = { //傳出的資料
         status: false,
         data: null
     }
-    switch (req.params.action) {
-        case 'registerAccount':
+    switch (WebAction) {
+        case 'RegisterAccount':
+            var RegisterData = { //註冊
+                id: null,
+                email: reqestData.email,
+                passwd: base64encode(reqestData.passwd),
+                last_login_date: moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'),
+                last_boat_date: null
+            };
             //查詢是否註冊過
-            checkUserAccount(reqestData, () => {
+            checkUserAccount(RegisterData, () => {
                 console.log(`Email:${reqestData.email}已經註冊過`);
                 content = JSON.stringify(resStatus(false));
                 res.send(content);
             }, () => {
                 //新增使用者帳號
-                addUserAccount(reqestData, () => {
+                addUserAccount(RegisterData, () => {
                     content = JSON.stringify(resStatus(true));
                     console.log(`Email:${reqestData.email}註冊成功`);
                     res.send(content);
                 });
             });
             break;
-        case 'userLogin':
+        case 'UserLogin':
             getUserAccount(reqestData.email, (data) => {
                 if (!data.length) {
                     console.log('取得使用者資料失敗');
                     responseData.status = false;
                     res.send(JSON.stringify(responseData));
                 } else {
+                    console.log('登入中');
+                    if (data[0]['passwd'] == base64encode(reqestData.passwd)) {
+                        responseData.data = data;
+                        responseData.status = true;
+                    } else {
+                        responseData.status = false;
+                    }
+                    res.send(JSON.stringify(responseData));
+                }
+            });
+            break;
+        case 'SendBoat':
+            console.log(reqestData);
+            getUserAccount(reqestData.email, (data) => {
+                if (!data.length) {
+                    console.log('新增船失敗');
+                    responseData.status = false;
+                    res.send(JSON.stringify(responseData));
+                } else {
+                    console.log('新增船成功');
                     responseData.data = data;
                     responseData.status = true;
                     res.send(JSON.stringify(responseData));
